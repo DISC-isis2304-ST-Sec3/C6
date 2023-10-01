@@ -1,5 +1,6 @@
 package uniandes.edu.co.proyecto.Modelo;
 import java.util.Date;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -8,23 +9,23 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 
 @Entity
-public class ReservaSpa extends Spa{
+public class ReservaSala extends Sala{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
     private Date fecha;
-    
+    private Integer duracion;
+
     @ManyToOne
-    @JoinColumn(name = "spa", referencedColumnName = "id")
+    @JoinColumn(name = "sala", referencedColumnName = "id")
     private Sala sala;
-
-
-    public ReservaSpa()
+    public ReservaSala()
     {;}
 
-    public ReservaSpa( Long id, Date fecha) {
+    public ReservaSala( Long id, Date fecha, Integer duracion) {
         this.id = id;
         this.fecha = fecha;
+        this.duracion = duracion;
     }
 
     public Long getId() {
@@ -41,6 +42,12 @@ public class ReservaSpa extends Spa{
     public void setFecha(Date fecha) {
         this.fecha = fecha;
     }
-    
+    public Integer getDuracion() {
+        return duracion;
+    }
+
+    public void setDuracion(Integer duracion) {
+        this.duracion = duracion;
+    }
     
 }

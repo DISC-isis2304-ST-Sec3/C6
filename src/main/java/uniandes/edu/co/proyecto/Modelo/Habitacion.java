@@ -1,9 +1,10 @@
 package uniandes.edu.co.proyecto.Modelo;
-import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 
@@ -13,24 +14,28 @@ import jakarta.persistence.Table;
 public class Habitacion {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)  
-    private Integer id;
+    private Long id;
     private String tipo_habitacion;
     private Integer costo_noche;
 
+    @ManyToOne
+    @JoinColumn(name = "hotel", referencedColumnName = "nombre")
+    private Hotel hotel;
+    
     public Habitacion()
     {;}
 
-    public Habitacion(Integer id, String tipo_habitacion, Integer costo_noche) {
+    public Habitacion(Long id, String tipo_habitacion, Integer costo_noche) {
         this.id = id;
         this.tipo_habitacion = tipo_habitacion;
         this.costo_noche = costo_noche;
     }
 
-    public Integer getIdn() {
+    public Long getIdn() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

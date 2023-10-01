@@ -5,25 +5,26 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
+
+
 @Entity
-@Table (name="Servicios")
-public class Servicio {
+@Table(name="ExtraSalas")
+public class ExtraSala {
 
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)  
+	@GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String nombre;
-    private String Tipo_Servicio;
+	private Integer costo;
 
-    public Servicio()
-    {;}
-
-    public Servicio(Long id, String nombre, String Tipo_Servicio) {
+    public ExtraSala(Long id,String nombre, Integer costo) {
         this.id = id;
         this.nombre = nombre;
-        this.Tipo_Servicio= Tipo_Servicio;
+        this.costo = costo;
     }
 
+    public ExtraSala()
+    {;}
     public Long getId() {
         return id;
     }
@@ -31,20 +32,16 @@ public class Servicio {
     public void setId(Long id) {
         this.id = id;
     }
-    public String getTipoServicio() {
-        return Tipo_Servicio;
-    }
-
-    public void setTipoServicio(String Tipo_Servicio) {
-        this.Tipo_Servicio = Tipo_Servicio;
-    }
-
     public String getNombre() {
         return nombre;
     }
-
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    
+    public Integer getCosto() {
+        return costo;
+    }
+    public void setCosto(Integer costo) {
+        this.costo = costo;
+    }
 }

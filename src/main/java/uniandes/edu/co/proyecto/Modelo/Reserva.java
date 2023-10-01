@@ -1,10 +1,6 @@
 package uniandes.edu.co.proyecto.Modelo;
 import java.sql.Date;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name="Reservas")
@@ -21,11 +17,22 @@ public class Reserva {
     private Boolean check_in;
     private Boolean check_out;
 
+    @ManyToOne
+    @JoinColumn(name = "hotel", referencedColumnName = "nombre")
+    private Hotel hotel;
+
+    @ManyToOne
+    @JoinColumn(name = "Planes_de_cosumo", referencedColumnName = "id")
+    private Hotel Planes_de_cosumo_id;
+
+
     public Reserva(Integer numero_personas, Date fecha_entrada, Date fecha_salida, Integer costo_total) {
         this.numero_personas = numero_personas;
         this.fecha_entrada = fecha_entrada;
         this.fecha_salida = fecha_salida;
         this.costo_total = costo_total;
+
+        
     }
 
     public Reserva()

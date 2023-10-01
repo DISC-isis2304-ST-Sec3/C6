@@ -1,14 +1,11 @@
 package uniandes.edu.co.proyecto.Modelo;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-
-public class Plan_De_Consumo {
 @Entity
-@Table(name="hoteles")
-public class Hotel {
+@Table(name="plan_de_consumo")
+public class Plan_De_Consumo {
+
     @Id
     private int id;
     
@@ -16,9 +13,9 @@ public class Hotel {
     private boolean bebida; 
     private boolean comida;
 
-    public Hotel(){;}
+    public Plan_De_Consumo(){;}
 
-    public Hotel(int id, String nombre, boolean bebida, boolean comida) {
+    public Plan_De_Consumo(int id, String nombre, boolean bebida, boolean comida) {
         this.id = id;
         this.nombre = nombre;
         this.bebida = bebida;
@@ -62,4 +59,3 @@ public class Hotel {
 }
 
 
-}
