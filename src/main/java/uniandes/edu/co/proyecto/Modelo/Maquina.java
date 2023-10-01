@@ -13,22 +13,22 @@ import jakarta.persistence.Table;
 public class Maquina extends Gimnasio{
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)  
-    private Integer id;
+    private Long id;
     private String nombre;
 
     public Maquina()
     {;}
     
-    public Maquina(Integer id, String nombre) {
+    public Maquina(Long id, String nombre) {
         this.id = id;
         this.nombre = nombre;
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

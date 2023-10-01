@@ -15,24 +15,24 @@ public class Servicio {
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)  
-    private Integer id;
+    private Long id;
     private String nombre;
     private String Tipo_Servicio;
 
     public Servicio()
     {;}
 
-    public Servicio(Integer id, String nombre, String Tipo_Servicio) {
+    public Servicio(Long id, String nombre, String Tipo_Servicio) {
         this.id = id;
         this.nombre = nombre;
         this.Tipo_Servicio= Tipo_Servicio;
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
     public String getTipoServicio() {
