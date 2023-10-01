@@ -4,9 +4,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.IdClass;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 
@@ -15,25 +12,26 @@ import jakarta.persistence.Table;
 @Table (name="Habitaciones")
 public class Habitacion {
     @Id
-    private Integer numero_habitacion;
+    @GeneratedValue(strategy=GenerationType.AUTO)  
+    private Integer id;
     private String tipo_habitacion;
     private Integer costo_noche;
 
     public Habitacion()
     {;}
 
-    public Habitacion(Integer numero_habitacion, String tipo_habitacion, Integer costo_noche) {
-        this.numero_habitacion = numero_habitacion;
+    public Habitacion(Integer id, String tipo_habitacion, Integer costo_noche) {
+        this.id = id;
         this.tipo_habitacion = tipo_habitacion;
         this.costo_noche = costo_noche;
     }
 
-    public Integer getNumero_habitacion() {
-        return numero_habitacion;
+    public Integer getIdn() {
+        return id;
     }
 
-    public void setNumero_habitacion(Integer numero_habitacion) {
-        this.numero_habitacion = numero_habitacion;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getTipo_habitacion() {
