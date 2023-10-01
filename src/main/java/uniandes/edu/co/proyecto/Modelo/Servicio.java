@@ -17,13 +17,15 @@ public class Servicio {
     @GeneratedValue(strategy=GenerationType.AUTO)  
     private Integer id;
     private String nombre;
+    private String Tipo_Servicio;
 
     public Servicio()
     {;}
 
-    public Servicio(Integer id, String nombre) {
+    public Servicio(Integer id, String nombre, String Tipo_Servicio) {
         this.id = id;
         this.nombre = nombre;
+        this.Tipo_Servicio= Tipo_Servicio;
     }
 
     public Integer getId() {
@@ -32,6 +34,13 @@ public class Servicio {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+    public String getTipoServicio() {
+        return Tipo_Servicio;
+    }
+
+    public void setTipoServicio(String Tipo_Servicio) {
+        this.Tipo_Servicio = Tipo_Servicio;
     }
 
     public String getNombre() {
