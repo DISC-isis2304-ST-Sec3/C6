@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="03BE0209-2721-613D-25DF-521703A4D471" name="Maquina_Gimnasio">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Gimnasio_id" id="B67D8594-2B8F-A61A-6D06-55493116045A">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A6600057-ED26-1A87-AAC7-67D700AEC065" referredColumn="DA0A932F-BE38-E3C6-FFA5-35AD9776516B"/>
+</associations>
+</Column>
+<Column name="Maquina_id" id="04366E54-C781-5611-EFFD-9B23FDCE5C2B">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="988CB269-2880-19FB-450C-2322BCFF3B7B" referredColumn="8899EA0B-B085-B8F2-DB65-0BE17A1730F5"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="31083313-CB4F-3416-0060-5C08893EF85E" name="Maquina_Gimnasio_PK">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B67D8594-2B8F-A61A-6D06-55493116045A"/>
+<colUsage columnID="04366E54-C781-5611-EFFD-9B23FDCE5C2B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F24FF253-BE45-CE23-FA57-8D8007C6BE1F" name="Maquina_Gimnasio_Gimnasio_FK">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>32205FAC-B891-1D77-07C5-1CEF02903039</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B67D8594-2B8F-A61A-6D06-55493116045A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="58C6C153-FB23-2E91-A8E2-627A4B39709A" name="Maquina_Gimnasio_Maquina_FK">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>32205FAC-B891-1D77-07C5-1CEF02903039</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="04366E54-C781-5611-EFFD-9B23FDCE5C2B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

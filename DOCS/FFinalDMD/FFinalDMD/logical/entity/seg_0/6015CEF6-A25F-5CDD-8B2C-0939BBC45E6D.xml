@@ -1,0 +1,44 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="6015CEF6-A25F-5CDD-8B2C-0939BBC45E6D" name="Wifis">
+<createdBy>juand</createdBy>
+<createdTime>2023-09-24 19:59:05 UTC</createdTime>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<engineerTo>
+<item key="3356477C-7D54-B745-1CD5-416E3DC2831C" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>63F82C01-BFDA-8862-DF40-138C23E83C63</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="costo_por_dia" id="26D29A6A-0FF9-ED8D-C527-6802DCAE9E15">
+<createdBy>juand</createdBy>
+<createdTime>2023-09-24 19:59:23 UTC</createdTime>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<engineerTo>
+<item key="3356477C-7D54-B745-1CD5-416E3DC2831C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="capacidad" id="C45739C7-327F-DFA4-D62D-93A9FF1B35DA">
+<createdBy>juand</createdBy>
+<createdTime>2023-09-24 19:59:23 UTC</createdTime>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<engineerTo>
+<item key="3356477C-7D54-B745-1CD5-416E3DC2831C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

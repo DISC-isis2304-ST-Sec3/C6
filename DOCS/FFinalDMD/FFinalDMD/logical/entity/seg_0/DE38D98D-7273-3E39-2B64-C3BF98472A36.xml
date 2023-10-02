@@ -1,0 +1,69 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="DE38D98D-7273-3E39-2B64-C3BF98472A36" name="Piscinas">
+<createdBy>juand</createdBy>
+<createdTime>2023-09-24 19:50:57 UTC</createdTime>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<engineerTo>
+<item key="3356477C-7D54-B745-1CD5-416E3DC2831C" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>63F82C01-BFDA-8862-DF40-138C23E83C63</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="horaCierre" id="E3F6BC48-BF85-362F-C522-AE966DA8250B">
+<createdBy>juand</createdBy>
+<createdTime>2023-09-24 19:51:03 UTC</createdTime>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<engineerTo>
+<item key="3356477C-7D54-B745-1CD5-416E3DC2831C" value="true"/>
+</engineerTo>
+<deprecated>true</deprecated>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="hora_apertura" id="8F961182-E5CB-2687-AADE-7A895FEB9C60">
+<createdBy>juand</createdBy>
+<createdTime>2023-09-24 19:51:03 UTC</createdTime>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<engineerTo>
+<item key="3356477C-7D54-B745-1CD5-416E3DC2831C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="profundidad" id="45E3D112-F86F-92D8-FA7B-590046EC7EB3">
+<createdBy>juand</createdBy>
+<createdTime>2023-09-24 19:51:03 UTC</createdTime>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<engineerTo>
+<item key="3356477C-7D54-B745-1CD5-416E3DC2831C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="capacidad" id="A47A1877-B442-07E4-8428-8CA7BDBE67BC">
+<createdBy>juand</createdBy>
+<createdTime>2023-09-24 19:51:03 UTC</createdTime>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<engineerTo>
+<item key="3356477C-7D54-B745-1CD5-416E3DC2831C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

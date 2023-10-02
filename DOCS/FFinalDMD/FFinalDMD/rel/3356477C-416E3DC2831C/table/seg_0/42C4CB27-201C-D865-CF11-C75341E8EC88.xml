@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="42C4CB27-201C-D865-CF11-C75341E8EC88" name="ReservasSpa">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>4D305D96-C421-4CB8-CA60-BA337952BB9F</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="fecha" id="29B60A04-733F-1841-73E6-4FAEF6D0A51D">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>3B820576-69BF-0305-451E-0FCD9598B5AB</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PlanSpa_id" id="1C75B229-299B-7150-F6C9-CE792476D313">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>A197D05F-48B6-6D58-957B-FC384FEA6163</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2332BE0C-71DB-7D1D-6744-951194E17073" referredColumn="DF1285E7-4890-3C37-CF6D-CC4FFDEBCF54"/>
+</associations>
+</Column>
+<Column name="Spas_id" id="09B51B10-D1D5-D2D1-BEA7-7E68C4FA2F4E">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>7BE0C401-9EFE-37FE-FCE5-E89EE4642024</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5618E138-020C-426E-42BD-E9F19CC9BC85" referredColumn="E038BDD0-10D5-B6CA-9901-A502137149EA"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A4C86D05-5907-A083-EE54-23F102C63E97" name="ReservasSpa_PK">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>7EBB59E6-C51F-F0B4-1C30-87D11BFDA3F0</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="29B60A04-733F-1841-73E6-4FAEF6D0A51D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3433A497-2129-B89E-3B52-EA92286D1367" name="ReservasSpa_PlanSpa_FK">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>049B41AA-49D1-B7E3-0A42-2886A2B285F7</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1C75B229-299B-7150-F6C9-CE792476D313"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1A694282-25CB-AFB2-29A2-E50235C379CA" name="ReservasSpa_Spas_FK">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>3803D063-3183-5C0F-7499-F3C0AE79A732</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="09B51B10-D1D5-D2D1-BEA7-7E68C4FA2F4E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

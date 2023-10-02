@@ -1,0 +1,71 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="13F42DEB-717D-CA32-C476-89A434128A3F" name="Hoteles">
+<createdBy>juand</createdBy>
+<createdTime>2023-09-24 19:28:05 UTC</createdTime>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<engineerTo>
+<item key="3356477C-7D54-B745-1CD5-416E3DC2831C" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="nombre" id="0DF9F17E-C63C-B627-8A80-DF9FD1C867AD">
+<createdBy>juand</createdBy>
+<createdTime>2023-09-24 19:28:16 UTC</createdTime>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<engineerTo>
+<item key="3356477C-7D54-B745-1CD5-416E3DC2831C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tipo" id="EE76D970-4845-4BA1-EECF-3165B84B0230">
+<createdBy>juand</createdBy>
+<createdTime>2023-09-24 19:28:40 UTC</createdTime>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<engineerTo>
+<item key="3356477C-7D54-B745-1CD5-416E3DC2831C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="estrellas" id="F7E4E90C-3B68-2F29-49A7-CE6F6F7B9076">
+<createdBy>juand</createdBy>
+<createdTime>2023-09-24 19:28:40 UTC</createdTime>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<engineerTo>
+<item key="3356477C-7D54-B745-1CD5-416E3DC2831C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="839F6725-A7F8-54AD-9946-E9C103E5FBA5" name="Hotel PK">
+<createdBy>juand</createdBy>
+<createdTime>2023-09-24 19:29:00 UTC</createdTime>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<engineerTo>
+<item key="3356477C-7D54-B745-1CD5-416E3DC2831C" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>0DF9F17E-C63C-B627-8A80-DF9FD1C867AD</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

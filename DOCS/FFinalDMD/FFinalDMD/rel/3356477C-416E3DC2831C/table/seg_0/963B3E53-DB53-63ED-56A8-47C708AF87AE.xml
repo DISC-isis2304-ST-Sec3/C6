@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="963B3E53-DB53-63ED-56A8-47C708AF87AE" name="Bares">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>B1CE009F-7C94-19CE-4736-A5ED2FDB8141</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="estilo" id="EC3542D6-93AE-19E2-CB18-6EB5C59429E3">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>26EC433D-BB15-D867-33C5-DAC53B343677</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id" id="7F2CCD56-892B-2F43-B9BB-FA50E9496CD8">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>FE538F90-AFFE-DBE0-8DB7-028D59DC3A41</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2499B16F-A75C-D131-D9D7-ECB66B51DE12" referredColumn="BE7B907D-1C0B-40F9-7B9C-D93A53B2F1BB"/>
+</associations>
+</Column>
+<Column name="capacidad" id="471503DE-5463-D9CA-8E1B-47957DAEBAF6">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>9B2FA47A-D13A-D259-0FA9-D1E6F7E5CCAA</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4B6B3D31-D110-2DC8-BFEE-D04348EEEDAB" name="Bares_PK">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>1ACFFCFB-E195-CE85-E7A6-00B01B09E45E</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7F2CCD56-892B-2F43-B9BB-FA50E9496CD8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="16E63E4E-63ED-120D-95C7-5D4ED0B1C79E" name="Bares_Servicios_FK">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>2F2F7863-F002-B2C9-5A92-E3F5CB985E82</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7F2CCD56-892B-2F43-B9BB-FA50E9496CD8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

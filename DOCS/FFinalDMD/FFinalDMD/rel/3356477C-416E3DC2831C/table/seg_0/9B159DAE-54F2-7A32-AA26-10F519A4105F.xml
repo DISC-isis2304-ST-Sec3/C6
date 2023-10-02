@@ -1,0 +1,159 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9B159DAE-54F2-7A32-AA26-10F519A4105F" name="Reservas">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>B23AEC78-981F-E5B6-14DA-57179BB91A1F</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="numero_personas" id="B1ED2F6D-5B87-0850-D4D6-2E9D8466C304">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>F066220A-4E9F-7001-EA0E-359388C81DD7</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id" id="BD83B4BC-855C-1152-3E19-7FC62A043A85">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>15510C0A-48EC-0788-39DE-404F9C872770</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_entrada" id="E4D9B050-68AE-13F2-2A52-521A3032AD1A">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>8D8EC3CC-EF3B-97E3-C31E-01956693BC31</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_salida" id="4DEE4824-F302-D045-75D4-472953280D4C">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>22B6F9D6-5D93-D4D5-B307-724F183DA47A</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="costo_total" id="E6E9476D-FEA1-7189-698B-4DD99104DEEF">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>91CF2DA3-EB40-A340-6BB7-1D82D9A78600</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="check_in" id="2B94173D-A02E-05B5-9413-13325A298903">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>705CDD1E-8EB1-674E-5A9D-312A20169F6D</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="check_out" id="2C9B1630-F8C8-AFA8-5DE7-5ABED0C9D49B">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>3980BBB3-196C-9CF8-12E8-D61EE2B31E97</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Hoteles_nombre" id="A9136084-6731-250B-F33D-084B96BCB918">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>82141593-16C3-82E8-04FA-3582D2DF8C41</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="48B709D6-E43E-7823-A889-CD5361BBAB21" referredColumn="8EFAA482-9F96-E8C3-C16A-8DF21D162DC9"/>
+</associations>
+</Column>
+<Column name="Planes_de_cosumo_id" id="88134395-1A30-BB29-F01D-44D477C28622">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>8BA76078-F9FF-F17D-A277-270E66A9D3F1</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DE49F9BF-CB47-03E4-29DC-E86FFB06BFDF" referredColumn="5BD655AE-D939-856A-4785-AC701FC4E3E2"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0278ADD6-8917-9712-D4D1-CA5AC7595C19" name="Reservas_PK">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>016D4CB6-553A-711D-D559-943F0D996668</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BD83B4BC-855C-1152-3E19-7FC62A043A85"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7995A99E-98CF-FFAD-871A-36E6FF45D8E6" name="Reservas_Hoteles_FK">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>61C9AE29-41A5-6BC8-A80A-EB291125E0A5</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A9136084-6731-250B-F33D-084B96BCB918"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7E098B71-1A94-439A-8B91-D1896B0ADA49" name="Reservas_Planes_de_cosumo_FK">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>594087C2-941C-EE79-DA42-3BCBD125E1DF</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="88134395-1A30-BB29-F01D-44D477C28622"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

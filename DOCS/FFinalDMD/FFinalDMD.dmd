@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="FFinalDMD" id="824D1FCF-2BD3-EAEE-1527-36E1855672AA" version="3.5">
+<createdBy>juand</createdBy>
+<createdTime>2023-09-24 19:26:04 UTC</createdTime>
+<ownerDesignName>modelo de clases sql</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>824D1FCF-2BD3-EAEE-1527-36E1855672AA</designId>
+</OSDM_Design>

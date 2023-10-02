@@ -1,0 +1,84 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BB1FFE8D-BC13-4770-1EFC-CFEA89F58F99" name="Gimnasio">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>1524C6AA-082F-75C0-EE43-041B5B1E3764</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="capacidad" id="67AF9729-3BF0-5FE4-20A2-1432ADD2E459">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>C9DC765C-68DD-BC91-A4FD-627B61503635</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id" id="DA0A932F-BE38-E3C6-FFA5-35AD9776516B">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>FE538F90-AFFE-DBE0-8DB7-028D59DC3A41</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2A1EF52F-5BD9-BF96-F1A1-8B461C28D2D6" referredColumn="BE7B907D-1C0B-40F9-7B9C-D93A53B2F1BB"/>
+</associations>
+</Column>
+<Column name="hora_apertura" id="E540328C-DBF4-E7FB-6CF7-1719F0C155BB">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>3A135BDE-9A6E-45A7-7BAA-F7DADDF5E250</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="hora_cierre" id="4BFF4245-845A-1926-3053-09BC25B32177">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>D3BDE241-25F3-7324-39F9-00BE0A5A092E</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EE6C38D2-D6CE-EB15-B869-D51905ED6D18" name="Gimnasio_PK">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>1ACFFCFB-E195-CE85-E7A6-00B01B09E45E</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DA0A932F-BE38-E3C6-FFA5-35AD9776516B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="97BA9F4F-A3FC-9B63-3474-23DCE4EC8A39" name="Gimnasio_Servicios_FK">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>8A9BF4EC-0106-FD8A-1E80-3ACA9817BF50</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DA0A932F-BE38-E3C6-FFA5-35AD9776516B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0FE5DB37-BFB0-76B1-1246-6795CAEA5F8B" name="Servicios">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>63F82C01-BFDA-8862-DF40-138C23E83C63</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="nombre" id="95450932-2B9F-44A3-2469-1BCDAFE863DD">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>C2F59035-A3EE-D53F-5C0D-C78397CC0FA1</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id" id="BE7B907D-1C0B-40F9-7B9C-D93A53B2F1BB">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>FE538F90-AFFE-DBE0-8DB7-028D59DC3A41</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Tipo_Servicio" id="9D550EC8-A4D3-026C-BD62-FD6F664ACA37">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<constraintName>CH_INH_Servicios</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>13</dataTypeSize>
+<listOfValues>
+<valueDef value="Bares" description="entity Bares"/>
+<valueDef value="Gimnasio" description="entity Gimnasio"/>
+<valueDef value="Lavado" description="entity Lavado"/>
+<valueDef value="Piscinas" description="entity Piscinas"/>
+<valueDef value="Restaurantes" description="entity Restaurantes"/>
+<valueDef value="Salas" description="entity Salas"/>
+<valueDef value="Spas" description="entity Spas"/>
+<valueDef value="Supermercados" description="entity Supermercados"/>
+<valueDef value="Tiendas" description="entity Tiendas"/>
+<valueDef value="Wifis" description="entity Wifis"/>
+</listOfValues>
+<ownDataTypeParameters>13,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isDiscriminatorColumn>true</isDiscriminatorColumn>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="81FA3CB3-20F5-AE60-389A-F59D78AC3DC4" name="Servicios_PK">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>1ACFFCFB-E195-CE85-E7A6-00B01B09E45E</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BE7B907D-1C0B-40F9-7B9C-D93A53B2F1BB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

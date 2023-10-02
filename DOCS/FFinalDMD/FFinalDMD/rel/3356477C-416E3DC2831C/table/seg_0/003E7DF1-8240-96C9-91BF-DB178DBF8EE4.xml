@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="003E7DF1-8240-96C9-91BF-DB178DBF8EE4" name="Lavado">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>7E59B081-95A5-9327-37D0-9BC039D71CF4</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="numero_prendas" id="C48AF351-57DA-9FDA-C581-A54E5E4AB7F4">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>C5E4800F-E633-D53A-1588-C8F0E60BC59D</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id" id="3C54FCF8-3FAD-2100-5C6D-4E34C33963C7">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>FE538F90-AFFE-DBE0-8DB7-028D59DC3A41</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E6ACF184-8CDD-6846-6FBE-ACE2C29A94C9" referredColumn="BE7B907D-1C0B-40F9-7B9C-D93A53B2F1BB"/>
+</associations>
+</Column>
+<Column name="tipo_prenda" id="268C5B74-8BC0-FC44-6F9B-EA442F5D2730">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>BB93EE4A-A00B-E1BC-6587-1AB7509A3604</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EB75DCFA-28E6-B2B3-9E1F-4D5C9AB99B3F" name="Lavado_PK">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>1ACFFCFB-E195-CE85-E7A6-00B01B09E45E</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3C54FCF8-3FAD-2100-5C6D-4E34C33963C7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BED457E1-3BCD-E10C-EB2B-4BDC0D8B83F8" name="Lavado_Servicios_FK">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>B2183686-E90C-A86C-451F-2DD9ECAB036A</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3C54FCF8-3FAD-2100-5C6D-4E34C33963C7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

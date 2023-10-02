@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C54FB585-293B-4EED-29DC-181B567A5B3C" name="Reservas_Servicios">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Reservas_id" id="860EE7BE-D67B-DA33-7F2F-51D4E6E26D3A">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EA71B731-F3AC-EBE3-BAEC-EEE36760BC0C" referredColumn="BD83B4BC-855C-1152-3E19-7FC62A043A85"/>
+</associations>
+</Column>
+<Column name="Servicios_id" id="4CAC097F-2A89-69B4-42CA-D3018138DB95">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8FBFAFAA-6CAB-E2F6-D597-B47DD8BCF84C" referredColumn="BE7B907D-1C0B-40F9-7B9C-D93A53B2F1BB"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5003B439-9974-8A53-0125-2E6CD857CD26" name="Reservas_Servicios_PK">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="860EE7BE-D67B-DA33-7F2F-51D4E6E26D3A"/>
+<colUsage columnID="4CAC097F-2A89-69B4-42CA-D3018138DB95"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="399D8781-2748-FDF2-82FD-2F369F26D6B5" name="Reservas_Servicios_Reservas_FK">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>E92DFB23-8567-DA7F-4193-B438B21DDB75</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="860EE7BE-D67B-DA33-7F2F-51D4E6E26D3A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A5B4BC4E-7F65-0D79-1866-BAB842DC70EB" name="Reservas_ServiciosFK">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>E92DFB23-8567-DA7F-4193-B438B21DDB75</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4CAC097F-2A89-69B4-42CA-D3018138DB95"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

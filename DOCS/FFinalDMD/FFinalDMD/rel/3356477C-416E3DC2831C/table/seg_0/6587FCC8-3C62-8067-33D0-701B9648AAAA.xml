@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6587FCC8-3C62-8067-33D0-701B9648AAAA" name="Tiendas">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>09FBF6A8-546A-1744-2883-4C7AC1A7BE2B</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="tipo" id="85A8FD09-DDF9-7C88-3E4C-D0272AFB6209">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>63AD1D91-1CAA-929B-EBC5-2F536C1071D8</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id" id="B9679AA3-2FC4-CC0B-CCA7-652623EE6EAF">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>FE538F90-AFFE-DBE0-8DB7-028D59DC3A41</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B3825BBE-7131-A062-0576-C271804D8A7D" referredColumn="BE7B907D-1C0B-40F9-7B9C-D93A53B2F1BB"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="613FFA09-F5DC-2D0C-8A84-4DC1ABD4DE2D" name="Tiendas_PK">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>1ACFFCFB-E195-CE85-E7A6-00B01B09E45E</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B9679AA3-2FC4-CC0B-CCA7-652623EE6EAF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="054D2AAE-6512-F934-50E7-0EA6432560B9" name="Tiendas_Servicios_FK">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>03036B04-7036-4E98-6418-C43AE7B4DEC4</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B9679AA3-2FC4-CC0B-CCA7-652623EE6EAF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

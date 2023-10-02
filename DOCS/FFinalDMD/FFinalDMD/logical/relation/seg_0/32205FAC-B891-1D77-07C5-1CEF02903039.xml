@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Maquina_Gimnasio" directorySegmentName="seg_0" id="32205FAC-B891-1D77-07C5-1CEF02903039">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 00:00:19 UTC</createdTime>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<engineerTo>
+<item key="3356477C-7D54-B745-1CD5-416E3DC2831C" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>1524C6AA-082F-75C0-EE43-041B5B1E3764</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>288F1812-4ADF-542B-C9FB-AEB6381D61DF</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AF9EA714-054A-44F8-5F88-170251D0557A" name="Salas_Extra">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ReservasSala_fecha" id="E8C9E71B-D1D9-34A3-2F86-C64409E37855">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="81DBE493-3F5C-49B4-650D-7F6212C397B2" referredColumn="497F93CF-0C0C-4957-EB54-4DA58E6DCE5D"/>
+</associations>
+</Column>
+<Column name="ExtrasSalas_id" id="0F610C78-A53C-DF6C-2EE8-B512427C61E8">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F2E7D05D-3144-3171-6A9A-21B263C1EFED" referredColumn="6CBC8592-F9EE-5DF1-6493-5D8E67DB06C1"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4DE6D866-454C-DA63-1CF1-05EEA71A8619" name="Salas_Extra_PK">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E8C9E71B-D1D9-34A3-2F86-C64409E37855"/>
+<colUsage columnID="0F610C78-A53C-DF6C-2EE8-B512427C61E8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1A7BE558-C0F7-A095-84BE-CBE83F2F6650" name="Salas_Extra_ReservasSala_FK">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>4B74BF45-A3AE-EA2C-60E5-3AA502A436EC</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E8C9E71B-D1D9-34A3-2F86-C64409E37855"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7BC96942-ED57-647A-0DAA-F14673200F75" name="Salas_Extra_ExtrasSalas_FK">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>4B74BF45-A3AE-EA2C-60E5-3AA502A436EC</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0F610C78-A53C-DF6C-2EE8-B512427C61E8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

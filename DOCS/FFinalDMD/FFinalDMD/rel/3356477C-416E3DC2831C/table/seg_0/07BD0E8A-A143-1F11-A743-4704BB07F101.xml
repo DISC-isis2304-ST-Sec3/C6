@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="07BD0E8A-A143-1F11-A743-4704BB07F101" name="Servicios_Productos">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Servicios_id" id="33FEBB06-EE22-7AFE-D5FE-2C98538E12FD">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1304A2CD-AF56-FE4F-3764-390E6FE7D230" referredColumn="BE7B907D-1C0B-40F9-7B9C-D93A53B2F1BB"/>
+</associations>
+</Column>
+<Column name="Productos_id" id="A233428C-481D-C703-EE20-7EC7EB83BAF5">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9A9BA09F-0A07-DADF-71F7-9A3A5875C382" referredColumn="11B89280-D930-9407-50B3-C47F8065A64D"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D2D2144D-A73E-E54F-7F73-6B4A798485F9" name="Servicios_Productos_PK">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="33FEBB06-EE22-7AFE-D5FE-2C98538E12FD"/>
+<colUsage columnID="A233428C-481D-C703-EE20-7EC7EB83BAF5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A17BB2DC-216F-E650-CCBC-9EC78415020A" name="Servicios_ProductosFK">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>69E6C7E9-054D-D9C5-8D13-4FB59E550B43</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="33FEBB06-EE22-7AFE-D5FE-2C98538E12FD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1A0895C2-0C7A-98AE-BD9E-9F769DB0D067" name="Servicios_ProductosFKv2">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>69E6C7E9-054D-D9C5-8D13-4FB59E550B43</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A233428C-481D-C703-EE20-7EC7EB83BAF5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

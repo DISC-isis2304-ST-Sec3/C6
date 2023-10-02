@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5A0903BD-9889-C507-7F6A-E36AB68DA480" name="Caract_habitacion">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CaracHabitaciones_id" id="0A528D0F-7DD3-2EBF-07FD-8B1D8786BE51">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B5C9C184-2519-FEF4-9957-9A9C45A46B91" referredColumn="33617B2F-D1D6-8971-C506-47A9BEA1C23F"/>
+</associations>
+</Column>
+<Column name="Habitaciones_id" id="29D075A4-EB35-6B71-67C9-BAEEE2B039D4">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0FDA0646-19C1-385F-FBBF-D98D89629CAB" referredColumn="E70C1F23-BE70-4A39-8714-8481DC2ABFAA"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6BC3352E-D6AB-138F-48DE-AA89F4D62DD7" name="Caract_habitacion_PK">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0A528D0F-7DD3-2EBF-07FD-8B1D8786BE51"/>
+<colUsage columnID="29D075A4-EB35-6B71-67C9-BAEEE2B039D4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FBBC0971-1CB6-F3A7-63D0-5F9974FDEE8A" name="CaracHabitaciones_FK">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>28D41AC5-F3D2-9DA1-855D-6EF0E604603E</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0A528D0F-7DD3-2EBF-07FD-8B1D8786BE51"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E3F9BD2E-A859-BC98-2BEB-23D6DC3B72B6" name="Caract_habitacionFK">
+<createdBy>juand</createdBy>
+<createdTime>2023-10-02 02:25:58 UTC</createdTime>
+<generatorID>28D41AC5-F3D2-9DA1-855D-6EF0E604603E</generatorID>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="29D075A4-EB35-6B71-67C9-BAEEE2B039D4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

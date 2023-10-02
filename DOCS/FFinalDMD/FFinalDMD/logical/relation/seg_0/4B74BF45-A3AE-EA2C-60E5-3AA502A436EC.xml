@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Salas_Extra" directorySegmentName="seg_0" id="4B74BF45-A3AE-EA2C-60E5-3AA502A436EC">
+<createdBy>juand</createdBy>
+<createdTime>2023-09-24 20:34:31 UTC</createdTime>
+<ownerDesignName>FFinalDMD</ownerDesignName>
+<engineerTo>
+<item key="3356477C-7D54-B745-1CD5-416E3DC2831C" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>075860BC-1DB5-34DD-1435-2A0E30049497</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>58A9038F-016D-4649-DDA0-A46E6360D57E</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
