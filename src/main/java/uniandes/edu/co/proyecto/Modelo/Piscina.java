@@ -14,6 +14,8 @@ public class Piscina extends Servicio{
     {;}
 
     public Piscina(Integer capacidad,Integer profundidad, Date horaApertura, Date horaCierre) {
+        super();
+       
         this.capacidad = capacidad;
         this.profundidad = profundidad;
         this.horaApertura = horaApertura;

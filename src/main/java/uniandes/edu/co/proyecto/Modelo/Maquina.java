@@ -16,6 +16,7 @@ public class Maquina extends Gimnasio{
     {;}
     
     public Maquina(Long id, String nombre) {
+        super();
         this.id = id;
         this.nombre = nombre;
     }

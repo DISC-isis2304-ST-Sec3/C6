@@ -11,6 +11,7 @@ public class Lavado extends Servicio{
     {;}
 
     public Lavado(String tipoPrenda, Integer numeroPrendas) {
+        super();
         this.tipoPrenda = tipoPrenda;
         this.numeroPrendas = numeroPrendas;
     }

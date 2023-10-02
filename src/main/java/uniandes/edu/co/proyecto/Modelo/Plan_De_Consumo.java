@@ -3,9 +3,9 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 @Entity
-@Table(name="plan_de_consumo")
+@Table(name="Planes_de_consumo")
 public class Plan_De_Consumo {
-
+    
     @Id
     private int id;
     

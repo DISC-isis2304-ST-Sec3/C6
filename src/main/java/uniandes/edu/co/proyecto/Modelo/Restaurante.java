@@ -11,6 +11,7 @@ public class Restaurante extends Servicio{
     {;}
 
     public Restaurante(Integer capacidad, String estilo) {
+        super();
         this.capacidad = capacidad;
         this.estilo = estilo;
     }

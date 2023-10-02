@@ -6,28 +6,28 @@ import jakarta.persistence.*;
 
 
 @Embeddable
-public class Reservas_ServiciosPK implements Serializable{
+public class Servicio_ProductoPK implements Serializable{
 
 @ManyToOne
-@JoinColumn(name = "Reservas_id", referencedColumnName= "id")
-private Reserva Reservas_id;
+@JoinColumn(name = "Productos_id", referencedColumnName= "id")
+private Producto Productos_id;
 
 @ManyToOne
 @JoinColumn(name = "Servicios_id", referencedColumnName= "id")
 private Servicio Servicios_id;
 
-public Reservas_ServiciosPK(Reserva Reservas_id, Servicio Servicios_id){
+public Servicio_ProductoPK(Producto Productos_id, Servicio Servicios_id){
     super();
-    this.Reservas_id = Reservas_id;
+    this.Productos_id = Productos_id;
     this.Servicios_id = Servicios_id;
 }
 
-    public Reserva getReservas() {
-        return Reservas_id;
+    public Producto getReservas() {
+        return Productos_id;
     }
 
     public void setReservas(Reserva Reservas_id) {
-        this.Reservas_id = Reservas_id;
+        this.Productos_id = Productos_id;
     }
     public Servicio getServicios() {
         return Servicios_id;

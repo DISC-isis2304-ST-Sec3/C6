@@ -4,6 +4,7 @@ import jakarta.persistence.Entity;
 
 @Entity
 public class Sala extends Servicio{
+    
     private Integer capacidad;
     private Integer costoPorHora;
     private String tipo;
@@ -12,6 +13,7 @@ public class Sala extends Servicio{
     {;}
 
     public Sala( Integer capacidad,Integer costoPorHora, String tipo) {
+        super();
         this.capacidad = capacidad;
         this.costoPorHora = costoPorHora;
         this.tipo = tipo;

@@ -11,6 +11,7 @@ public class Bar extends Servicio{
     {;}
 
     public Bar(Integer capacidad, String estilo) {
+        super();
         this.capacidad = capacidad;
         this.estilo = estilo;
     }

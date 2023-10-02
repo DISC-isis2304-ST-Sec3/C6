@@ -19,7 +19,7 @@ public class Habitacion {
     private Integer costo_noche;
 
     @ManyToOne
-    @JoinColumn(name = "hotel", referencedColumnName = "nombre")
+    @JoinColumn(name = "id_hotel", referencedColumnName = "id")
     private Hotel hotel;
     
     public Habitacion()

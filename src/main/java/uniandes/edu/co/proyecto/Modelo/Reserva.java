@@ -1,5 +1,5 @@
 package uniandes.edu.co.proyecto.Modelo;
-import java.sql.Date;
+import java.util.Date;
 import jakarta.persistence.*;
 
 @Entity
@@ -26,13 +26,13 @@ public class Reserva {
     private Hotel Planes_de_cosumo_id;
 
 
-    public Reserva(Integer numero_personas, Date fecha_entrada, Date fecha_salida, Integer costo_total) {
+    public Reserva(Integer numero_personas, Date fecha_entrada, Date fecha_salida, Integer costo_total, Boolean check_in, Boolean check_out) {
         this.numero_personas = numero_personas;
         this.fecha_entrada = fecha_entrada;
         this.fecha_salida = fecha_salida;
         this.costo_total = costo_total;
-
-        
+        this.check_in = check_in;
+        this.check_out = check_out;
     }
 
     public Reserva()

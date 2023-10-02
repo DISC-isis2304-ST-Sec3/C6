@@ -23,6 +23,7 @@ public class ReservaSala extends Sala{
     {;}
 
     public ReservaSala( Long id, Date fecha, Integer duracion) {
+        super();
         this.id = id;
         this.fecha = fecha;
         this.duracion = duracion;

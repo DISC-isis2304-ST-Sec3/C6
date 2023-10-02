@@ -13,6 +13,7 @@ public class Gimnasio extends Servicio{
     {;}
 
     public Gimnasio(Integer capacidad,Date horaApertura, Date horaCierre) {
+        super();
         this.capacidad = capacidad;
         this.horaApertura = horaApertura;
         this.horaCierre = horaCierre;
