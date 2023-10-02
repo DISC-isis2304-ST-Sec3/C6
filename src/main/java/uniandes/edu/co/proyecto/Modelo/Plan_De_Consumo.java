@@ -1,5 +1,7 @@
 package uniandes.edu.co.proyecto.Modelo;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 @Entity
@@ -7,8 +9,8 @@ import jakarta.persistence.Table;
 public class Plan_De_Consumo {
     
     @Id
+    @GeneratedValue(strategy=GenerationType.AUTO) 
     private int id;
-    
     private String nombre;
     private boolean bebida; 
     private boolean comida;
@@ -22,9 +24,6 @@ public class Plan_De_Consumo {
         this.comida = comida;
     }
 
-    public int getId() {
-        return id;
-    }
 
     public String getNombre() {
         return nombre;
@@ -38,9 +37,6 @@ public class Plan_De_Consumo {
         return comida;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
