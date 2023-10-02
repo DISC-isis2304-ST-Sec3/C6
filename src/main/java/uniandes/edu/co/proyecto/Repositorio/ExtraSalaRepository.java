@@ -12,7 +12,7 @@ public interface ExtraSalaRepository extends JpaRepository<ExtraSala, Integer>{
         Collection<ExtraSala> darExtraSalas();
 
      @Query(value = "SELECT * FROM ExtrasSalas WHERE id = :id", nativeQuery = true)
-        ExtraSala ExtrasSalas(@Param("id") int id);
+        ExtraSala darExtrasSala(@Param("id") int id);
 
     @Modifying
         @Transactional
@@ -22,7 +22,7 @@ public interface ExtraSalaRepository extends JpaRepository<ExtraSala, Integer>{
     @Modifying
         @Transactional
         @Query(value = "UPDATE ExtrasSalas SET nombre = :nombre, costo = :costo WHERE id = :id", nativeQuery = true)
-        void actualizarExtraSala(@Param("id") long id, @Param("nombre") String nombre, @Param("costo") String costo);
+        void actualizarExtraSala(@Param("id") long id, @Param("nombre") String nombre, @Param("costo") Integer costo);
 
     
         @Modifying

@@ -1,5 +1,7 @@
 package uniandes.edu.co.proyecto.Modelo;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Table;
 import jakarta.persistence.Id;
 
@@ -9,6 +11,8 @@ import jakarta.persistence.Id;
 public class Usuario {
 
     @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)  
+    private Long id;
     private String login;
     private String contrasena;
     private String nombre;

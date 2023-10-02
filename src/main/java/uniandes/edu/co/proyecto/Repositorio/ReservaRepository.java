@@ -9,12 +9,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import jakarta.transaction.Transactional;
 
-/*private Integer numero_personas;
-    private Date fecha_entrada;
-    private Date fecha_salida;
-    private Integer costo_total;
-    private Boolean check_in;
-    private Boolean check_out;*/
 
 public interface ReservaRepository extends JpaRepository<Reserva, Integer> {
      @Query(value = "SELECT * FROM Reservas", nativeQuery = true)
@@ -31,10 +25,10 @@ public interface ReservaRepository extends JpaRepository<Reserva, Integer> {
     @Modifying
         @Transactional
         @Query(value = "UPDATE Reservas SET numero_personas = :numero_personas, fecha_entrada = :fecha_entrada, fecha_salida=:fecha_salida, costo_total=:costo_total, check_in=:check_in,check_out=: check_out", nativeQuery = true)
-        void actualizarReserva(@Param("numero_personas") Integer numero_personas,@Param("fecha_entrada") Date fecha_entrada, @Param("fecha_salida") Date fecha_salida, @Param("costo_total") Integer costo_total, @Param("check_in") Boolean check_in, @Param("check_out") Boolean check_out);
+        void actualizarReserva(@Param("id") long id,@Param("numero_personas") Integer numero_personas,@Param("fecha_entrada") Date fecha_entrada, @Param("fecha_salida") Date fecha_salida, @Param("costo_total") Integer costo_total, @Param("check_in") Boolean check_in, @Param("check_out") Boolean check_out);
     
         @Modifying
         @Transactional
         @Query(value = "DELETE FROM Reservas WHERE id = :id", nativeQuery = true)
-        void eliminar(@Param("id") long id);
+        void eliminarReserva(@Param("id") long id);
 }

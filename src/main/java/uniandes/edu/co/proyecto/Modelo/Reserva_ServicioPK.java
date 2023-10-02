@@ -1,12 +1,11 @@
 package uniandes.edu.co.proyecto.Modelo;
 import java.io.Serializable;
-import java.sql.Date;
 
 import jakarta.persistence.*;
 
 
 @Embeddable
-public class Reservas_ServiciosPK implements Serializable{
+public class Reserva_ServicioPK implements Serializable{
 
 @ManyToOne
 @JoinColumn(name = "Reservas_id", referencedColumnName= "id")
@@ -16,7 +15,7 @@ private Reserva Reservas_id;
 @JoinColumn(name = "Servicios_id", referencedColumnName= "id")
 private Servicio Servicios_id;
 
-public Reservas_ServiciosPK(Reserva Reservas_id, Servicio Servicios_id){
+public Reserva_ServicioPK(Reserva Reservas_id, Servicio Servicios_id){
     super();
     this.Reservas_id = Reservas_id;
     this.Servicios_id = Servicios_id;

@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 
 @Entity
-@Table(name="Reservas")
+@Table(name="Salas_Extra")
 public class SalaExtra {
     @EmbeddedId
     private SalaExtraPK pk;
