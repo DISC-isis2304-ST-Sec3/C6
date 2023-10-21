@@ -15,7 +15,7 @@ public interface ReservaRepository extends JpaRepository<Reserva, Integer> {
         Collection<Reserva> darReservas();
 
      @Query(value = "SELECT * FROM Reservas WHERE id = :id", nativeQuery = true)
-        Reserva darReserva(@Param("id") int id);
+        Reserva darReserva(@Param("id") Integer id);
 
     @Modifying
         @Transactional
@@ -24,7 +24,7 @@ public interface ReservaRepository extends JpaRepository<Reserva, Integer> {
 
     @Modifying
         @Transactional
-        @Query(value = "UPDATE Reservas SET numero_personas = :numero_personas, fecha_entrada = :fecha_entrada, fecha_salida=:fecha_salida, costo_total=:costo_total, check_in=:check_in,check_out=: check_out", nativeQuery = true)
+        @Query(value = "UPDATE Reservas SET numero_personas = :numero_personas, fecha_entrada = :fecha_entrada, fecha_salida=:fecha_salida, costo_total=:costo_total, check_in=:check_in,check_out= :check_out WHERE id = :id" , nativeQuery = true)
         void actualizarReserva(@Param("id") long id,@Param("numero_personas") Integer numero_personas,@Param("fecha_entrada") Date fecha_entrada, @Param("fecha_salida") Date fecha_salida, @Param("costo_total") Integer costo_total, @Param("check_in") Boolean check_in, @Param("check_out") Boolean check_out);
     
         @Modifying
