@@ -10,7 +10,7 @@ import org.springframework.data.jpa.repository.Modifying;
 import jakarta.transaction.Transactional;
 
 
-public interface ReservaRepository extends JpaRepository<Reserva, Integer> {
+public interface ReservaRepository extends JpaRepository<Reserva, Long> {
      @Query(value = "SELECT * FROM Reservas", nativeQuery = true)
         Collection<Reserva> darReservas();
 

@@ -9,7 +9,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.data.jpa.repository.Modifying;
 import jakarta.transaction.Transactional;
 
-public interface Maquina_GimnasioRepository extends JpaRepository<ExtraSala, Integer>{
+public interface Maquina_GimnasioRepository extends JpaRepository<ExtraSala, Long>{
      @Query(value = "SELECT * FROM Maquina_Gimnasio", nativeQuery = true)
         Collection<Maquina_Gimnasio> darMaquina_Gimnasios();
 

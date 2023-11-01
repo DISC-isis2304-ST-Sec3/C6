@@ -10,7 +10,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.data.jpa.repository.Modifying;
 import jakarta.transaction.Transactional;
 
-public interface Caract_habitacionRepository extends JpaRepository<ExtraSala, Integer>{
+public interface Caract_habitacionRepository extends JpaRepository<ExtraSala, Long>{
     
     @Query(value = "SELECT * FROM Caract_habitacion", nativeQuery = true)
     Collection<Caract_habitacion> darServicio_Producto();

@@ -7,7 +7,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.data.jpa.repository.Modifying;
 import jakarta.transaction.Transactional;
 
-public interface ExtraSalaRepository extends JpaRepository<ExtraSala, Integer>{
+public interface ExtraSalaRepository extends JpaRepository<ExtraSala, Long>{
      @Query(value = "SELECT * FROM ExtrasSalas", nativeQuery = true)
         Collection<ExtraSala> darExtraSalas();
 

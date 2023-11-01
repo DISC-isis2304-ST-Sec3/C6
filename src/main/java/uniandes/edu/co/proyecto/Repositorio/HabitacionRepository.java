@@ -7,7 +7,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.data.jpa.repository.Modifying;
 import jakarta.transaction.Transactional;
 
-public interface HabitacionRepository extends JpaRepository<Habitacion, Integer>{
+public interface HabitacionRepository extends JpaRepository<Habitacion, Long>{
      @Query(value = "SELECT * FROM Habitaciones", nativeQuery = true)
         Collection<Habitacion> darHabitaciones();
 
