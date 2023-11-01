@@ -2,7 +2,9 @@ package uniandes.edu.co.proyecto.Repositorio;
 import java.util.Collection;
 import org.springframework.data.jpa.repository.JpaRepository;
 import uniandes.edu.co.proyecto.Modelo.ExtraSala;
+import uniandes.edu.co.proyecto.Modelo.Reserva;
 import uniandes.edu.co.proyecto.Modelo.Reserva_Servicio;
+import uniandes.edu.co.proyecto.Modelo.Servicio;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -29,7 +31,7 @@ public interface Reserva_ServiciosRepository extends JpaRepository<ExtraSala, Lo
     @Modifying
     @Transactional
     @Query(value = "INSERT INTO Reserva_Servicio (reservas_id, servicios_id) VALUES (:reservas_id, :servicios_id)", nativeQuery = true)
-    void insertarReserva_Servicios(@Param("reservas_id") Integer reservas_id, @Param("servicios_id") Integer servicios_id);
+    void insertarReserva_Servicios(@Param("reservas_id") Reserva reserva, @Param("servicios_id") Servicio servicio);
 
         
 }
