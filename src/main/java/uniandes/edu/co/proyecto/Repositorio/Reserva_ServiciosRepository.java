@@ -1,7 +1,6 @@
 package uniandes.edu.co.proyecto.Repositorio;
 import java.util.Collection;
 import org.springframework.data.jpa.repository.JpaRepository;
-import uniandes.edu.co.proyecto.Modelo.ExtraSala;
 import uniandes.edu.co.proyecto.Modelo.Reserva;
 import uniandes.edu.co.proyecto.Modelo.Reserva_Servicio;
 import uniandes.edu.co.proyecto.Modelo.Servicio;
@@ -11,7 +10,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.data.jpa.repository.Modifying;
 import jakarta.transaction.Transactional;
 
-public interface Reserva_ServiciosRepository extends JpaRepository<ExtraSala, Long>{
+public interface Reserva_ServiciosRepository extends JpaRepository<Reserva_Servicio, Long>{
 @Query(value = "SELECT * FROM Reserva_Servicio", nativeQuery = true)
     Collection<Reserva_Servicio> darReserva_Servicio();
 
