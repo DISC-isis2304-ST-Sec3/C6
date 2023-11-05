@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import uniandes.edu.co.proyecto.Modelo.Usuario;
 import uniandes.edu.co.proyecto.Repositorio.UsuarioRepository;
 
-@RestController
+@Controller
 public class UsuarioController {
 
     @Autowired
@@ -21,7 +21,7 @@ public class UsuarioController {
     @GetMapping("/Usuarios")
     public String usuarios(Model model){
         model.addAttribute("Usuarios", usuarioRepository.darUsuarios());
-        return model.toString();
+        return "usuario";
     }
 
     @GetMapping("/TiposUsuarios")
