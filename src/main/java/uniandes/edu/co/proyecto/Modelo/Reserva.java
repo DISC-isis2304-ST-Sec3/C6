@@ -10,7 +10,7 @@ public class Reserva {
     @Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-
+    private Long id_usuario;    ///Para modelar las reservas por usuario
     private Integer numero_personas;
     private Date fecha_entrada;
     private Date fecha_salida;
@@ -19,13 +19,14 @@ public class Reserva {
     private Boolean check_out;
 
 
-    public Reserva(Integer numero_personas, Date fecha_entrada, Date fecha_salida, Integer costo_total, Boolean check_in, Boolean check_out) {
+    public Reserva(Long id_usuario, Integer numero_personas, Date fecha_entrada, Date fecha_salida, Integer costo_total, Boolean check_in, Boolean check_out) {
         this.numero_personas = numero_personas;
         this.fecha_entrada = fecha_entrada;
         this.fecha_salida = fecha_salida;
         this.costo_total = costo_total;
         this.check_in = check_in;
         this.check_out = check_out;
+        this.id_usuario = id_usuario;
     }
 
     public Reserva()
@@ -85,6 +86,14 @@ public class Reserva {
 
     public void setCheck_out(Boolean check_out) {
         this.check_out = check_out;
+    }
+
+    public Long getId_usuario() {
+        return id_usuario;
+    }
+
+    public void setId_usuario(Long id_usuario) {
+        this.id_usuario = id_usuario;
     }
 
     

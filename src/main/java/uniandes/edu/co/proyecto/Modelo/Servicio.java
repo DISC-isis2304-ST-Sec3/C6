@@ -14,14 +14,15 @@ public class Servicio {
     private Long id;
     private String nombre;
     private String Tipo_Servicio;
-
+    private Integer precio;
     public Servicio()
     {;}
 
-    public Servicio(Long id, String nombre, String Tipo_Servicio) {
+    public Servicio(Long id, String nombre, String Tipo_Servicio, Integer precio) {
         this.id = id;
         this.nombre = nombre;
         this.Tipo_Servicio= Tipo_Servicio;
+        this.precio= precio;
     }
 
     public Long getId() {
@@ -47,4 +48,11 @@ public class Servicio {
         this.nombre = nombre;
     }
     
+    public Integer getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(Integer precio) {
+        this.precio = precio;
+    }
 }

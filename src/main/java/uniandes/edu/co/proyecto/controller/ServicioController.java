@@ -1,7 +1,6 @@
 package uniandes.edu.co.proyecto.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -32,7 +31,7 @@ public class ServicioController {
 
     @PostMapping("/Servicios/new/save")
     public String servicioGuardar(@ModelAttribute Servicio servicio){
-        servicioRepository.insertarServicio(servicio.getNombre(), servicio.getTipoServicio());
+        servicioRepository.insertarServicio(servicio.getNombre(), servicio.getTipoServicio(),servicio.getPrecio());
         return "redirect:/Servicios";
     }
 
@@ -49,7 +48,7 @@ public class ServicioController {
 
     @PostMapping("/Servicios/{id}/edit/save")
     public String servicioEditarGuardar(@PathVariable("id") int id, @ModelAttribute Servicio servicio){
-        servicioRepository.actualizarServicio(id, servicio.getNombre(), servicio.getTipoServicio());
+        servicioRepository.actualizarServicio(id, servicio.getNombre(), servicio.getTipoServicio(), servicio.getPrecio());
         return "redirect:/Servicios";
     }
 
