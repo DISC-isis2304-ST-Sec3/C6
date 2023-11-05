@@ -8,11 +8,11 @@ import jakarta.persistence.*;
 public class Servicio_ProductoPK implements Serializable{
 
 @ManyToOne
-@JoinColumn(name = "Productos_id", referencedColumnName= "id")
+@JoinColumn(name = "productos_id", referencedColumnName= "id")
 private Producto Productos_id;
 
 @ManyToOne
-@JoinColumn(name = "Servicios_id", referencedColumnName= "id")
+@JoinColumn(name = "servicios_id", referencedColumnName= "id")
 private Servicio Servicios_id;
 
 public Servicio_ProductoPK(Producto Productos_id, Servicio Servicios_id){

@@ -15,7 +15,7 @@ public interface ReservaRepository extends JpaRepository<Reserva, Long> {
         Collection<Reserva> darReservas();
 
      @Query(value = "SELECT * FROM Reservas WHERE id = :id", nativeQuery = true)
-        Reserva darReserva(@Param("id") Integer id);
+        Reserva darReserva(@Param("id") long id);
 
     @Modifying
         @Transactional

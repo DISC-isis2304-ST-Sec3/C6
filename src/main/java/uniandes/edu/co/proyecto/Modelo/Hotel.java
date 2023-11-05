@@ -6,9 +6,9 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="Hoteles")
+@Table(name="hoteles")
 public class Hotel {
-     @Id
+    @Id
     @GeneratedValue(strategy=GenerationType.AUTO)  
     private Long id;
     private String nombre;

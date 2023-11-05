@@ -9,7 +9,7 @@ import jakarta.persistence.Table;
 
 
 @Entity
-@Table(name="Productos")
+@Table(name="productos")
 public class Producto {
 
     @Id
@@ -18,9 +18,11 @@ public class Producto {
 
     private String nombre;
     private Integer costo;
-    public Producto(String nombre, Integer costo) {
+    private String tipo;
+    public Producto(String nombre, Integer costo, String tipo) {
         this.nombre = nombre;
         this.costo = costo;
+        this.tipo =tipo;
     }
 
     public Producto()
@@ -48,6 +50,14 @@ public class Producto {
 
     public void setCosto(Integer costo) {
         this.costo = costo;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 
     

@@ -23,4 +23,6 @@ public class Caract_habitacionController {
 
     @Autowired
     private Caract_habitacionRepository caract_habitacionRepository;
+
 }
+

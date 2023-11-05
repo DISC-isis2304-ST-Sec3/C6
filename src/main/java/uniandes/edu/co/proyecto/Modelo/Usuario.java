@@ -7,7 +7,7 @@ import jakarta.persistence.Id;
 
 
 @Entity
-@Table (name="Usuarios")
+@Table (name="usuarios")
 public class Usuario {
 
     @Id
@@ -17,15 +17,17 @@ public class Usuario {
     private String contrasena;
     private String nombre;
     private Integer no_documento;
+    private String tipo_usuario;
 
     public Usuario()
     {;}
 
-    public Usuario(String login, String contrasena, String nombre, Integer no_documento) {
+    public Usuario(String login, String contrasena, String nombre, Integer no_documento, String tipo_usuario) {
         this.login = login;
         this.contrasena = contrasena;
         this.nombre = nombre;
         this.no_documento = no_documento;
+        this.tipo_usuario=tipo_usuario;
     }
 
     public String getLogin() {
@@ -59,5 +61,22 @@ public class Usuario {
     public void setNo_documento(Integer no_documento) {
         this.no_documento = no_documento;
     }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getTipo_usuario() {
+        return tipo_usuario;
+    }
+
+    public void setTipo_usuario(String tipo_usuario) {
+        this.tipo_usuario = tipo_usuario;
+    }
+    
     
 }

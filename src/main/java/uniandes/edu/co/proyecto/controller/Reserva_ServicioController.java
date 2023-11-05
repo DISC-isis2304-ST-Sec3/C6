@@ -27,15 +27,11 @@ public class Reserva_ServicioController {
     @Autowired
     private ServicioRepository servicioRepository;
     
-    @GetMapping("/Reservas_Servicios")
-    public String reservaes(Model model){
-        model.addAttribute("reservas_Servicio", reserva_ServiciosRepository.darReserva_Servicio());
-        return model.toString();
-    }
 
-    @GetMapping("/Reservas/new")
+    @GetMapping("/Reservas_Servicios/new")
     public String reservaForm(Model model){
-        model.addAttribute("reserva_Servicio", new Reserva_Servicio());
+        model.addAttribute("Servicios", servicioRepository.darServicios());
+        model.addAttribute("Reservas", reservaRepository.darReservas());
         return "reservaNueva";
     }
 

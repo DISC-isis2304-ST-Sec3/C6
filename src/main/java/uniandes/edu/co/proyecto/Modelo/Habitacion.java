@@ -10,7 +10,7 @@ import jakarta.persistence.Table;
 
 @Entity
 
-@Table (name="Habitaciones")
+@Table (name="habitaciones")
 public class Habitacion {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)  
