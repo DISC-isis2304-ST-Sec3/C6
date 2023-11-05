@@ -1,4 +1,5 @@
 package uniandes.edu.co.proyecto.Repositorio;
+import java.sql.Date;
 import java.util.Collection;
 import org.springframework.data.jpa.repository.JpaRepository;
 import uniandes.edu.co.proyecto.Modelo.Reserva;
@@ -25,12 +26,12 @@ public interface Reserva_ServiciosRepository extends JpaRepository<Reserva_Servi
     @Modifying
     @Transactional
     @Query(value = "UPDATE Reserva_Servicio SET reservas_id = :reservas_id_actualizado, servicios_id = :servicios_id_actualizado WHERE reservas_id = :reservas_id AND servicios_id = :servicios_id", nativeQuery = true)
-    void actualizarReserva_Servicios(@Param("reservas_id") Integer reservas_id, @Param("servicios_id") Integer servicios_id, @Param("reservas_id_actualizado") Integer reservas_id_actualizado, @Param("servicios_id_actualizado") Integer servicios_id_actualizado);
+    void actualizarReserva_Servicios(@Param("reservas_id") Integer reservas_id, @Param("servicios_id") Integer servicios_id, @Param("fecha_consumo") Date fecha_consumo, @Param("cont_servicios") Integer cont_servicios);
     
     @Modifying
     @Transactional
-    @Query(value = "INSERT INTO Reserva_Servicio (reservas_id, servicios_id) VALUES (:reservas_id, :servicios_id)", nativeQuery = true)
-    void insertarReserva_Servicios(@Param("reservas_id") Reserva reserva, @Param("servicios_id") Servicio servicio);
+    @Query(value = "INSERT INTO Reserva_Servicio (reservas_id, servicios_id) VALUES (:reservas_id, :servicios_id, :fecha_consumo, :cont_servicios)", nativeQuery = true)
+    void insertarReserva_Servicios(@Param("reservas_id") Reserva reserva, @Param("servicios_id") Servicio servicio,@Param("fecha_consumo") Date fecha_consumo, @Param("cont_servicios") Integer cont_servicios);
 
         
 }

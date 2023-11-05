@@ -19,13 +19,13 @@ public interface ReservaRepository extends JpaRepository<Reserva, Long> {
 
     @Modifying
         @Transactional
-        @Query(value = "INSERT INTO Reservas (id,id_usuario,numero_personas,fecha_entrada,fecha_salida,costo_total,check_in,check_out) VALUES ( proyecto_sequence.nextval , :id_usuario, :numero_personas, :fecha_entrada, :fecha_salida, :costo_total, :check_in, :check_out)", nativeQuery = true)
-        void insertarReserva(@Param("id_usuario") Long id_usuario, @Param("numero_personas") Integer numero_personas, @Param("fecha_entrada") Date fecha_entrada, @Param("fecha_salida") Date fecha_salida, @Param("costo_total") Integer costo_total, @Param("check_in") Boolean check_in, @Param("check_out") Boolean check_out);
+        @Query(value = "INSERT INTO Reservas (id,id_usuario,numero_personas,fecha_entrada,fecha_salida,costo_total,check_in,check_out) VALUES ( proyecto_sequence.nextval , :id_usuario, :numero_personas, :fecha_entrada, :fecha_salida, :costo_total, :check_in, :check_out, :cont_reservas)", nativeQuery = true)
+        void insertarReserva(@Param("id_usuario") Long id_usuario, @Param("numero_personas") Integer numero_personas, @Param("fecha_entrada") Date fecha_entrada, @Param("fecha_salida") Date fecha_salida, @Param("costo_total") Integer costo_total, @Param("check_in") Boolean check_in, @Param("check_out") Boolean check_out, @Param("cont_reservas") Integer cont_reservas);
 
     @Modifying
         @Transactional
-        @Query(value = "UPDATE Reservas SET numero_personas = :id_usuario, :numero_personas, fecha_entrada = :fecha_entrada, fecha_salida=:fecha_salida, costo_total=:costo_total, check_in=:check_in,check_out= :check_out WHERE id = :id" , nativeQuery = true)
-        void actualizarReserva(@Param("id") long id, @Param("id_usuario")Long id_usuario, @Param("numero_personas") Integer numero_personas,@Param("fecha_entrada") Date fecha_entrada, @Param("fecha_salida") Date fecha_salida, @Param("costo_total") Integer costo_total, @Param("check_in") Boolean check_in, @Param("check_out") Boolean check_out);
+        @Query(value = "UPDATE Reservas SET numero_personas = :id_usuario, :numero_personas, fecha_entrada = :fecha_entrada, fecha_salida=:fecha_salida, costo_total=:costo_total, check_in=:check_in,check_out= :check_out, cont_reservas=: cont_reservas WHERE id = :id" , nativeQuery = true)
+        void actualizarReserva(@Param("id") long id, @Param("id_usuario")Long id_usuario, @Param("numero_personas") Integer numero_personas,@Param("fecha_entrada") Date fecha_entrada, @Param("fecha_salida") Date fecha_salida, @Param("costo_total") Integer costo_total, @Param("check_in") Boolean check_in, @Param("check_out") Boolean check_out, @Param("cont_reservas") Integer cont_reservas);
     
         @Modifying
         @Transactional

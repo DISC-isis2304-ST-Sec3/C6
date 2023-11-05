@@ -17,6 +17,7 @@ public class Habitacion {
     private Long id;
     private String tipo_habitacion;
     private Integer costo_noche;
+    private Integer cont_habitaciones;//Contador 
 
     @ManyToOne
     @JoinColumn(name = "id_hotel", referencedColumnName = "id")
@@ -25,10 +26,20 @@ public class Habitacion {
     public Habitacion()
     {;}
 
-    public Habitacion(Long id, String tipo_habitacion, Integer costo_noche) {
+    public Habitacion(Long id, String tipo_habitacion, Integer costo_noche, Integer cont_habitaciones) {
         this.id = id;
         this.tipo_habitacion = tipo_habitacion;
         this.costo_noche = costo_noche;
+        this.cont_habitaciones = cont_habitaciones;
+    }
+
+    
+    public Integer getCont_habitaciones() {
+        return cont_habitaciones;
+    }
+
+    public void setCont_habitaciones(Integer cont_habitaciones) {
+        this.cont_habitaciones = cont_habitaciones;
     }
 
     public Long getIdn() {

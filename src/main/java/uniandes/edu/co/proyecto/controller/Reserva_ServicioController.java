@@ -15,6 +15,7 @@ import uniandes.edu.co.proyecto.Modelo.Reserva_ServicioPK;
 import uniandes.edu.co.proyecto.Repositorio.ReservaRepository;
 import uniandes.edu.co.proyecto.Repositorio.ServicioRepository;
 import uniandes.edu.co.proyecto.Repositorio.Reserva_ServiciosRepository;
+import uniandes.edu.co.proyecto.Modelo.Reserva_Servicio;
 
 @RestController
 public class Reserva_ServicioController {
@@ -45,7 +46,7 @@ public class Reserva_ServicioController {
         Reserva_Servicio reserva_servicio  = new Reserva_Servicio();
         reserva_servicio.SetSReservas_Servicios(pk);
 
-        reserva_ServiciosRepository.insertarReserva_Servicios(reserva, servicio);
+        reserva_ServiciosRepository.insertarReserva_Servicios(reserva, servicio,reserva_servicio.getFecha_consumo(), reserva_servicio.getCont_servicios());
 
         return "redirect:/Reservas_servicios";
              }

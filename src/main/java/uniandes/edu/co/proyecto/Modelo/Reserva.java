@@ -17,9 +17,10 @@ public class Reserva {
     private Integer costo_total;
     private Boolean check_in;
     private Boolean check_out;
+    private Integer cont_reservas; // Contador de reservas por dia 
 
-
-    public Reserva(Long id_usuario, Integer numero_personas, Date fecha_entrada, Date fecha_salida, Integer costo_total, Boolean check_in, Boolean check_out) {
+    public Reserva(Long id_usuario, Integer numero_personas, Date fecha_entrada, Date fecha_salida, Integer costo_total, Boolean check_in, Boolean check_out,
+    Integer cont_reservas) {
         this.numero_personas = numero_personas;
         this.fecha_entrada = fecha_entrada;
         this.fecha_salida = fecha_salida;
@@ -27,11 +28,13 @@ public class Reserva {
         this.check_in = check_in;
         this.check_out = check_out;
         this.id_usuario = id_usuario;
+        this.cont_reservas = cont_reservas;
     }
 
     public Reserva()
     {;}
 
+    
     public Long getId() {
         return id;
     }
@@ -96,9 +99,12 @@ public class Reserva {
         this.id_usuario = id_usuario;
     }
 
-    
+    public Integer getCont_reservas() {
+        return cont_reservas;
+    }
 
-    
+    public void setCont_reservas(Integer cont_reservas) {
+        this.cont_reservas = cont_reservas;
+    }
 
-    
 }

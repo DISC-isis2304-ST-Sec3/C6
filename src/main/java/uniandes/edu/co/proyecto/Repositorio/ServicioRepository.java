@@ -19,13 +19,13 @@ public interface ServicioRepository extends JpaRepository<Servicio, Long> {
 
     @Modifying
         @Transactional
-        @Query(value = "INSERT INTO Servicios (id, nombre, Tipo_Servicio, precio) VALUES ( proyecto_sequence.nextval , :nombre, :Tipo_Servicio, :precio)", nativeQuery = true)
-        void insertarServicio(@Param("nombre") String nombre, @Param("Tipo_Servicio") String Tipo_Servicio, @Param("precio") Integer precio);
+        @Query(value = "INSERT INTO Servicios (id, nombre, Tipo_Servicio, precio) VALUES ( proyecto_sequence.nextval , :nombre, :Tipo_Servicio, :precio, :idHabitacion, :cont_servicio)", nativeQuery = true)
+        void insertarServicio(@Param("nombre") String nombre, @Param("Tipo_Servicio") String Tipo_Servicio, @Param("precio") Integer precio, @Param("idHabitacion") Long idHabitacion, @Param("cont_servicio") Integer cont_servicio);
 
     @Modifying
         @Transactional
-        @Query(value = "UPDATE Servicios SET nombre = :nombre, Tipo_Servicio = :Tipo_Servicio WHERE id = :id", nativeQuery = true)
-        void actualizarServicio(@Param("id") long id, @Param("nombre") String nombre, @Param("Tipo_Servicio") String Tipo_Servicio, @Param("precio") Integer precio);
+        @Query(value = "UPDATE Servicios SET nombre = :nombre, Tipo_Servicio = :Tipo_Servicio, idHabitacion = :idHabitacion, cont_servicio =: cont_servicio WHERE id = :id", nativeQuery = true)
+        void actualizarServicio(@Param("id") long id, @Param("nombre") String nombre, @Param("Tipo_Servicio") String Tipo_Servicio, @Param("precio") Integer precio, @Param("idHabitacion") Long idHabitacion, @Param("cont_servicio") Integer cont_servicio);
 
     
         @Modifying
