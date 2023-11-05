@@ -14,7 +14,7 @@ public class Usuario {
     @GeneratedValue(strategy=GenerationType.AUTO)  
     private Long id;
     private String login;
-    private String contrasena;
+    private String contraseña;
     private String nombre;
     private Integer no_documento;
     private String tipo_usuario;
@@ -22,9 +22,9 @@ public class Usuario {
     public Usuario()
     {;}
 
-    public Usuario(String login, String contrasena, String nombre, Integer no_documento, String tipo_usuario) {
+    public Usuario(String login, String contraseña, String nombre, Integer no_documento, String tipo_usuario) {
         this.login = login;
-        this.contrasena = contrasena;
+        this.contraseña = contraseña;
         this.nombre = nombre;
         this.no_documento = no_documento;
         this.tipo_usuario=tipo_usuario;
@@ -38,12 +38,12 @@ public class Usuario {
         this.login = login;
     }
 
-    public String getContrasena() {
-        return contrasena;
+    public String getcontraseña() {
+        return contraseña;
     }
 
-    public void setContrasena(String contrasena) {
-        this.contrasena = contrasena;
+    public void setcontraseña(String contraseña) {
+        this.contraseña = contraseña;
     }
 
     public String getNombre() {

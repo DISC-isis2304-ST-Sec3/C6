@@ -18,14 +18,6 @@ public class Reserva {
     private Boolean check_in;
     private Boolean check_out;
 
-    @ManyToOne
-    @JoinColumn(name = "hotel", referencedColumnName = "nombre")
-    private Hotel hotel;
-
-    @ManyToOne
-    @JoinColumn(name = "Planes_de_cosumo", referencedColumnName = "id")
-    private Hotel Planes_de_cosumo_id;
-
 
     public Reserva(Integer numero_personas, Date fecha_entrada, Date fecha_salida, Integer costo_total, Boolean check_in, Boolean check_out) {
         this.numero_personas = numero_personas;

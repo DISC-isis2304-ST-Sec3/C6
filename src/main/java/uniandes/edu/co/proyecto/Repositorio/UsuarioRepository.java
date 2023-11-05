@@ -24,13 +24,13 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
 
     @Modifying
         @Transactional
-        @Query(value = "INSERT INTO Usuarios (id, login, contrasena, nombre, no_documento, tipo_usuario) VALUES ( proyecto_sequence.nextval , :login, :contrasena, :nombre, :no_documento, :tipo_usuario)", nativeQuery = true)
-        void insertarUsuario(@Param("login") String login, @Param("contrasena") String contrasena, @Param("nombre") String nombre, @Param("no_documento") Integer no_documento, @Param("tipo_usuario") String tipo_usuario);
+        @Query(value = "INSERT INTO Usuarios (id, login, contraseña, nombre, no_documento, tipo_usuario) VALUES ( proyecto_sequence.nextval , :login, :contraseña, :nombre, :no_documento, :tipo_usuario)", nativeQuery = true)
+        void insertarUsuario(@Param("login") String login, @Param("contraseña") String contraseña, @Param("nombre") String nombre, @Param("no_documento") Integer no_documento, @Param("tipo_usuario") String tipo_usuario);
 
     @Modifying
         @Transactional
-        @Query(value = "UPDATE Usuarios SET login =:login, contrasena = :contrasena, nombre = :nombre, no_documento = :no_documento, tipo_usuario = :tipo_usuario WHERE id = :id", nativeQuery = true)
-        void actualizarUsuario(@Param("id") long id, @Param("login") String login, @Param("contrasena") String contrasena, @Param("nombre") String nombre, @Param("no_documento") Integer no_documento, @Param("tipo_usuario") String tipo_usuario);
+        @Query(value = "UPDATE Usuarios SET login =:login, contraseña = :contraseña, nombre = :nombre, no_documento = :no_documento, tipo_usuario = :tipo_usuario WHERE id = :id", nativeQuery = true)
+        void actualizarUsuario(@Param("id") long id, @Param("login") String login, @Param("contraseña") String contraseña, @Param("nombre") String nombre, @Param("no_documento") Integer no_documento, @Param("tipo_usuario") String tipo_usuario);
 
         @Modifying
         @Transactional
