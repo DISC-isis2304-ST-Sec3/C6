@@ -36,21 +36,21 @@ public class Reserva_ServicioController {
         return "reservaNueva";
     }
 
-    @PostMapping("/Reservas_Servicios/new/save")
-    public String reservaGuardar(@ModelAttribute("Reservas_id") Integer idReserva, @ModelAttribute("Servicios_id") Integer idServicio)
-             {
-        Reserva reserva= reservaRepository.darReserva(idReserva);
-        Servicio servicio= servicioRepository.darServicio(idServicio);
+    // @PostMapping("/Reservas_Servicios/new/save")
+    // public String reservaGuardar(@ModelAttribute("Reservas_id") Integer idReserva, @ModelAttribute("Servicios_id") Integer idServicio)
+    //          {
+    //     Reserva reserva= reservaRepository.darReserva(idReserva);
+    //     Servicio servicio= servicioRepository.darServicio(idServicio);
         
-        Reserva_ServicioPK pk= new Reserva_ServicioPK(reserva, servicio);
-        Reserva_Servicio reserva_servicio  = new Reserva_Servicio();
-        reserva_servicio.SetSReservas_Servicios(pk);
+    //     Reserva_ServicioPK pk= new Reserva_ServicioPK(reserva, servicio);
+    //     Reserva_Servicio reserva_servicio  = new Reserva_Servicio();
+    //     reserva_servicio.SetSReservas_Servicios(pk);
 
-        reserva_ServiciosRepository.insertarReserva_Servicios(reserva, servicio,reserva_servicio.getFecha_consumo(), reserva_servicio.getCont_servicios());
+    //     reserva_ServiciosRepository.insertarReserva_Servicios(reserva, servicio,reserva_servicio.getFecha_consumo(), reserva_servicio.getCont_servicios());
 
-        return "redirect:/Reservas_servicios";
-             }
-        }
+    //     return "redirect:/Reservas_servicios";
+    //          }
+    //     }
 
              
 //     @GetMapping("/Reservas_Servicios/{id}/edit")
@@ -75,6 +75,5 @@ public class Reserva_ServicioController {
 //         reservaRepository.eliminarReserva(id);
 //         return "redirect:/Reservas";
 //     }
-
-// }
+ }
 

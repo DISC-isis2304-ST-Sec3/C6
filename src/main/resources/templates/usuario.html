@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,31 +8,30 @@
 
 </head>
 <body>
+    <div>
         <h1>Lista de Usuarios</h1>
         <table class="table table-hover table-bordered">
             <thead class ="thead-dark">
                 <tr>
-                    <th>id</th>
-                    <th>login</th>
-                    <th>contraseña</th>
-                    <th>nombre</th>
-                    <th>no_documento</th>
-                    <th>TIPO_USUARIO</th>
+                    <!-- <th>id</th> -->
+                    <th>test</th>
                 </tr>
             </thead>
-            <th:block th:each= "usuario :${usuarios}">
+            
+            <th:block th:each="user:${usuario}">
                 <tr>
-                    <td th:text="${usuario.id}"></td>
-                    <td th:text="${usuario.login}"></td>
-                    <td th:text="${usuario.contraseña}"></td>
-                    <td th:text="${usuario.nombre}"></td>
-                    <td th:text="${usuario.no_documento}"></td>
-                    <td>
-                        <a th:href="@{usuarios/{id}/edit(id=${usuario.id})}">Editar</a>
-                        <a th:href="@{usuarios/{id}/delete(id=${usuario.id})}"
-                            onclick="return confirm('¿Estás seguro de borrar este usuario?')">Borrar</a>
-                    </td>
+                    <!-- <td th:text="${usuario.id}"></td> -->
+                    <td>test</td>
+                    <!-- <td th:text="${usuarios.id}"></td> -->
+                <!-- <td>
+                    <a th:href="@{usuarios/{id}/edit(id=${usuario.id})}">Editar</a>
+                    <a th:href="@{usuarios/{id}/delete(id=${usuario.id})}"
+                        onclick="return confirm('¿Estás seguro de borrar este usuario?')">Borrar</a>
+                </td> -->
                 </tr>
             </th:block>
+            
+        </table>
+    </div>
 </body>
 </html>

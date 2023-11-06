@@ -30,33 +30,33 @@ public class ReservaController {
         return "reservaNueva";
     }
 
-    @PostMapping("/Reservas/new/save")
-    public String reservaGuardar(@ModelAttribute Reserva reserva){
-        reservaRepository.insertarReserva(reserva.getId_usuario(),reserva.getNumero_personas(), reserva.getFecha_entrada(), reserva.getFecha_salida(), reserva.getCosto_total(), reserva.getCheck_in(), reserva.getCheck_out(),reserva.getCont_reservas());
-        return "redirect:/Reservas";
-    }
+    // @PostMapping("/Reservas/new/save")
+    // public String reservaGuardar(@ModelAttribute Reserva reserva){
+    //     reservaRepository.insertarReserva(reserva.getId_usuario(),reserva.getNumero_personas(), reserva.getFecha_entrada(), reserva.getFecha_salida(), reserva.getCosto_total(), reserva.getCheck_in(), reserva.getCheck_out(),reserva.getId_habitacion());
+    //     return "redirect:/Reservas";
+    // }
 
-    @GetMapping("/Reservas/{id}/edit")
-    public String reservaEditarForm(@PathVariable("id") int id, Model model){
-        Reserva reserva= reservaRepository.darReserva(id);
-        if(reserva!=null){
-            model.addAttribute("reserva", reserva);
-            return "reservaEditar";
-        } else{
-            return "redirect:/Reservas";
-        }
-    }
+    // @GetMapping("/Reservas/{id}/edit")
+    // public String reservaEditarForm(@PathVariable("id") int id, Model model){
+    //     Reserva reserva= reservaRepository.darReserva(id);
+    //     if(reserva!=null){
+    //         model.addAttribute("reserva", reserva);
+    //         return "reservaEditar";
+    //     } else{
+    //         return "redirect:/Reservas";
+    //     }
+    // }
 
-    @PostMapping("/Reservas/{id}/edit/save")
-    public String reservaEditarGuardar(@PathVariable("id") int id, @ModelAttribute Reserva reserva){
-        reservaRepository.actualizarReserva(id,reserva.getId_usuario(), reserva.getNumero_personas(), reserva.getFecha_entrada(), reserva.getFecha_salida(), reserva.getCosto_total(), reserva.getCheck_in(), reserva.getCheck_out(),reserva.getCont_reservas());
-        return "redirect:/Reservas";
-    }
+    // @PostMapping("/Reservas/{id}/edit/save")
+    // public String reservaEditarGuardar(@PathVariable("id") int id, @ModelAttribute Reserva reserva){
+    //     reservaRepository.actualizarReserva(id,reserva.getId_usuario(), reserva.getNumero_personas(), reserva.getFecha_entrada(), reserva.getFecha_salida(), reserva.getCosto_total(), reserva.getCheck_in(), reserva.getCheck_out(),reserva.getId_habitacion());
+    //     return "redirect:/Reservas";
+    // }
 
-    @GetMapping("/Reservas/{id}/delete")
-    public String reservaEliminar(@PathVariable("id") int id){
-        reservaRepository.eliminarReserva(id);
-        return "redirect:/Reservas";
-    }
+    // @GetMapping("/Reservas/{id}/delete")
+    // public String reservaEliminar(@PathVariable("id") int id){
+    //     reservaRepository.eliminarReserva(id);
+    //     return "redirect:/Reservas";
+    // }
 
 }

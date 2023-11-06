@@ -19,6 +19,8 @@ public class Usuario {
     private Integer no_documento;
     private String tipo_usuario;
 
+
+    
     public Usuario()
     {;}
 

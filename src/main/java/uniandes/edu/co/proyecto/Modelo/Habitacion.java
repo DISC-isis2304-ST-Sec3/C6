@@ -19,9 +19,7 @@ public class Habitacion {
     private Integer costo_noche;
     private Integer cont_habitaciones;//Contador 
 
-    @ManyToOne
-    @JoinColumn(name = "id_hotel", referencedColumnName = "id")
-    private Hotel hotel;
+
     
     public Habitacion()
     {;}

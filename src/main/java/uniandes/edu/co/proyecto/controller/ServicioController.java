@@ -23,39 +23,39 @@ public class ServicioController {
         return model.toString();
     }
 
-    @GetMapping("/Servicios/new")
-    public String servicioForm(Model model){
-        model.addAttribute("servicio", new Servicio());
-        return "servicioNueva";
-    }
+    // @GetMapping("/Servicios/new")
+    // public String servicioForm(Model model){
+    //     model.addAttribute("servicio", new Servicio());
+    //     return "servicioNueva";
+    // }
 
-    @PostMapping("/Servicios/new/save")
-    public String servicioGuardar(@ModelAttribute Servicio servicio){
-        servicioRepository.insertarServicio(servicio.getNombre(), servicio.getTipoServicio(),servicio.getPrecio(),servicio.getIdHabitacion(),servicio.getCont_servicio());
-        return "redirect:/Servicios";
-    }
+    // @PostMapping("/Servicios/new/save")
+    // public String servicioGuardar(@ModelAttribute Servicio servicio){
+    //     servicioRepository.insertarServicio(servicio.getNombre(), servicio.getTipoServicio(),servicio.getPrecio());
+    //     return "redirect:/Servicios";
+    // }
 
-    @GetMapping("/Servicios/{id}/edit")
-    public String servicioEditarForm(@PathVariable("id") int id, Model model){
-        Servicio servicio= servicioRepository.darServicio(id);
-        if(servicio!=null){
-            model.addAttribute("servicio", servicio);
-            return "servicioEditar";
-        } else{
-            return "redirect:/Servicios";
-        }
-    }
+    // @GetMapping("/Servicios/{id}/edit")
+    // public String servicioEditarForm(@PathVariable("id") int id, Model model){
+    //     Servicio servicio= servicioRepository.darServicio(id);
+    //     if(servicio!=null){
+    //         model.addAttribute("servicio", servicio);
+    //         return "servicioEditar";
+    //     } else{
+    //         return "redirect:/Servicios";
+    //     }
+    // }
 
-    @PostMapping("/Servicios/{id}/edit/save")
-    public String servicioEditarGuardar(@PathVariable("id") int id, @ModelAttribute Servicio servicio){
-        servicioRepository.actualizarServicio(id, servicio.getNombre(), servicio.getTipoServicio(), servicio.getPrecio(),servicio.getIdHabitacion(),servicio.getCont_servicio());
-        return "redirect:/Servicios";
-    }
+    // @PostMapping("/Servicios/{id}/edit/save")
+    // public String servicioEditarGuardar(@PathVariable("id") int id, @ModelAttribute Servicio servicio){
+    //     servicioRepository.actualizarServicio(id, servicio.getNombre(), servicio.getTipoServicio(), servicio.getPrecio());
+    //     return "redirect:/Servicios";
+    // }
 
-    @GetMapping("/Servicios/{id}/delete")
-    public String servicioEliminar(@PathVariable("id") int id){
-        servicioRepository.eliminarServicio(id);
-        return "redirect:/Servicios";
-    }
+    // @GetMapping("/Servicios/{id}/delete")
+    // public String servicioEliminar(@PathVariable("id") int id){
+    //     servicioRepository.eliminarServicio(id);
+    //     return "redirect:/Servicios";
+    // }
 
 }

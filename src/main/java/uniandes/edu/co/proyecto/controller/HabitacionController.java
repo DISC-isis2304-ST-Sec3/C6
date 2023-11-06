@@ -30,33 +30,33 @@ public class HabitacionController {
         return "habitacionNueva";
     }
 
-    @PostMapping("/Habitaciones/new/save")
-    public String habitacionGuardar(@ModelAttribute Habitacion habitacion){
-        habitacionRepository.insertarHabitacion(habitacion.getTipo_habitacion(), habitacion.getCosto_noche(),habitacion.getCont_habitaciones());
-        return "redirect:/Habitaciones";
-    }
+    // @PostMapping("/Habitaciones/new/save")
+    // public String habitacionGuardar(@ModelAttribute Habitacion habitacion){
+    //     habitacionRepository.insertarHabitacion(habitacion.getTipo_habitacion(), habitacion.getCosto_noche(),habitacion.getCont_habitaciones());
+    //     return "redirect:/Habitaciones";
+    // }
 
-    @GetMapping("/Habitaciones/{id}/edit")
-    public String habitacionEditarForm(@PathVariable("id") int id, Model model){
-        Habitacion habitacion= habitacionRepository.darHabitacion(id);
-        if(habitacion!=null){
-            model.addAttribute("habitacion", habitacion);
-            return "habitacionEditar";
-        } else{
-            return "redirect:/Habitaciones";
-        }
-    }
+    // @GetMapping("/Habitaciones/{id}/edit")
+    // public String habitacionEditarForm(@PathVariable("id") int id, Model model){
+    //     Habitacion habitacion= habitacionRepository.darHabitacion(id);
+    //     if(habitacion!=null){
+    //         model.addAttribute("habitacion", habitacion);
+    //         return "habitacionEditar";
+    //     } else{
+    //         return "redirect:/Habitaciones";
+    //     }
+    // }
 
-    @PostMapping("/Habitaciones/{id}/edit/save")
-    public String habitacionEditarGuardar(@PathVariable("id") int id, @ModelAttribute Habitacion habitacion){
-        habitacionRepository.actualizarHabitacion(id, habitacion.getTipo_habitacion(), habitacion.getCosto_noche(),habitacion.getCont_habitaciones());
-        return "redirect:/Habitaciones";
-    }
+    // @PostMapping("/Habitaciones/{id}/edit/save")
+    // public String habitacionEditarGuardar(@PathVariable("id") int id, @ModelAttribute Habitacion habitacion){
+    //     habitacionRepository.actualizarHabitacion(id, habitacion.getTipo_habitacion(), habitacion.getCosto_noche(),habitacion.getCont_habitaciones());
+    //     return "redirect:/Habitaciones";
+    // }
 
-    @GetMapping("/Habitaciones/{id}/delete")
-    public String habitacionEliminar(@PathVariable("id") int id){
-        habitacionRepository.eliminarHabitacion(id);
-        return "redirect:/Habitaciones";
-    }
+    // @GetMapping("/Habitaciones/{id}/delete")
+    // public String habitacionEliminar(@PathVariable("id") int id){
+    //     habitacionRepository.eliminarHabitacion(id);
+    //     return "redirect:/Habitaciones";
+    // }
     
 }
