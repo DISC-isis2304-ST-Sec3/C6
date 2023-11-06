@@ -16,22 +16,20 @@
                     <th>login</th>
                     <th>contraseña</th>
                     <th>nombre</th>
-                    <th>no_documento</th>
-                    <th>TIPO_USUARIO</th>
-                    <th>id_reserva</th>
-                    <th>id_hotel</th>
+                    <th>cedula</th>
+                    <th>rol</th>
+                    <th>hotel</th>
                 </tr>
             </thead>
-            <th:block th:each= "usuario :${usuarios}">
+            <th:block th:each= "usuario : ${Usuarios}">
                 <tr>
                     <td th:text="${usuario.id}"></td>
                     <td th:text="${usuario.login}"></td>
-                    <td th:text="${usuario.contraseña}"></td>
+                    <td th:text="${usuario.contrasena}"></td>
                     <td th:text="${usuario.nombre}"></td>
                     <td th:text="${usuario.no_documento}"></td>
                     <td th:text="${usuario.tipo_usuario}"></td>
-                    <td th:text="${usuario.reservas_id}"></td>
-                    <td th:text="${usuario.hotel_id}"></td>
+                    <td th:text="${usuario.hoteles_id.nombre}"></td>
                     <td>
                         <a th:href="@{usuarios/{id}/edit(id=${usuario.id})}">Editar</a>
                         <a th:href="@{usuarios/{id}/delete(id=${usuario.id})}"

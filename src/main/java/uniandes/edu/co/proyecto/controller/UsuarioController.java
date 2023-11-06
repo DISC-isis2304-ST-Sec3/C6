@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 import uniandes.edu.co.proyecto.Modelo.Usuario;
 import uniandes.edu.co.proyecto.Repositorio.UsuarioRepository;
@@ -38,7 +37,7 @@ public class UsuarioController {
 
     @PostMapping("/Usuarios/new/save")
     public String usuarioGuardar(@ModelAttribute Usuario usuario){
-        usuarioRepository.insertarUsuario(usuario.getLogin(),usuario.getcontraseña(),usuario.getNombre(),usuario.getNo_documento(),usuario.getTipo_usuario());;
+        usuarioRepository.insertarUsuario(usuario.getLogin(),usuario.getcontrasena(),usuario.getNombre(),usuario.getNo_documento(),usuario.getTipo_usuario());;
         return "redirect:/Usuarios";
     }
 
@@ -55,7 +54,7 @@ public class UsuarioController {
 
     @PostMapping("/Usuarios/{id}/edit/save")
     public String usuarioEditarGuardar(@PathVariable("id") int id, @ModelAttribute Usuario usuario){
-        usuarioRepository.actualizarUsuario(id, usuario.getLogin(),usuario.getcontraseña(),usuario.getNombre(),usuario.getNo_documento(),usuario.getTipo_usuario());
+        usuarioRepository.actualizarUsuario(id, usuario.getLogin(),usuario.getcontrasena(),usuario.getNombre(),usuario.getNo_documento(),usuario.getTipo_usuario());
         return "redirect:/Usuarios";
     }
 
