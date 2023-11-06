@@ -25,7 +25,7 @@ public Servicio_ProductoPK(Producto Productos_id, Servicio Servicios_id){
         return Productos_id;
     }
 
-    public void setReservas(Reserva Reservas_id) {
+    public void setReservas(Producto Productos_id) {
         this.Productos_id = Productos_id;
     }
     public Servicio getServicios() {
