@@ -17,12 +17,14 @@
                     <thead class="thead-dark">
                         <tr>
                             <th>Fechas de mayores ingresos</th>
+                            <th>Consumos Realizados</th>
                         </tr>
                     </thead>
                     <tbody>
                         <th:block th:each="dato : ${ingreso}">
                             <tr>
-                                <td th:text="${dato}"></td>
+                                <td th:text="${dato[0]}"></td>
+                                <td th:text="${dato[1]}"></td>
                             </tr>
                         </th:block>
                     </tbody>
@@ -33,12 +35,14 @@
                     <thead class="thead-dark">
                         <tr>
                             <th>Días de mayor ocupación</th>
+                            <th>Ocupación</th>
                         </tr>
                     </thead>
                     <tbody>
                         <th:block th:each="dato : ${mayor}">
                             <tr>
-                                <td th:text="${dato}"></td>
+                                <td th:text="${dato[0]}"></td>
+                                <td th:text="${dato[1]}"></td>
                             </tr>
                         </th:block>
                     </tbody>
@@ -49,12 +53,14 @@
                     <thead class="thead-dark">
                         <tr>
                             <th>Fechas de menor demanda</th>
+                            <th>Ocupación</th>
                         </tr>
                     </thead>
                     <tbody>
                         <th:block th:each="dato : ${menor}">
                             <tr>
-                                <td th:text="${dato}"></td>
+                                <td th:text="${dato[0]}"></td>
+                                <td th:text="${dato[1]}"></td>
                             </tr>
                         </th:block>
                     </tbody>
