@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos servicio</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}" />
+</head>
+<body>
+    <div>
+        <h1>MOSTRAR EL ÍNDICE DE OCUPACIÓN DE CADA UNA DE LAS HABITACIONES DEL HOTEL</h1>
+        <h5 th:text="${'Tiempo de carga: '+ tiempo + 's'}"></h5>
+        
+        <table class="table table-hover table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Habitacion</th>
+  
+                    <th>Prcentaje de Ocupación</th>
+                </tr>
+            </thead>
+            <tbody>
+                <th:block th:each="dato : ${rta}">
+                    <tr>
+                        <td th:text="${dato[0]}"></td>
+                        <td th:text="${dato[1]}"></td>
+                    </tr>
+                </th:block>
+            </tbody>
+        </table>
+
+        <a th:href="@{/}" class="btn btn-primary">Volver</a>
+    </div>
+</body>
+</html>
