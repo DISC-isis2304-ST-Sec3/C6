@@ -17,7 +17,7 @@ public interface RFC7Repository extends JpaRepository <Reserva, Long>{
             "    JOIN reservas r ON u.id = r.usuarios_id\r\n" + 
             "    WHERE r.fecha_entrada >= TO_DATE(SYSDATE - 365, 'DD/MM/YYYY')\r\n" + 
             "    GROUP BY u.id, u.login\r\n" + 
-            "    HAVING SUM(r.costo_total) > 15000000\r\n" + 
+            "    HAVING SUM(r.costo_total) > 150000\r\n" + 
             ") consumo\r\n" + 
             "JOIN (\r\n" + 
             "    -- Resultado del cálculo de duración de estadía\r\n" + 

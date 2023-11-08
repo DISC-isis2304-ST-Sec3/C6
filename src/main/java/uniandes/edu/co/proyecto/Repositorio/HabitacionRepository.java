@@ -13,7 +13,7 @@ public interface HabitacionRepository extends JpaRepository<Habitacion, Long>{
 
      @Query(value = "SELECT * FROM Habitaciones WHERE id = :id", nativeQuery = true)
         Habitacion darHabitacion(@Param("id") int id);
-
+        
     // @Modifying
     //     @Transactional
     //     @Query(value = "INSERT INTO Habitaciones (id, tipo_habitacion, costo_noche) VALUES ( proyecto_sequence.nextval , :tipo_habitacion, :costo_noche, :cont_habitaciones)", nativeQuery = true)
