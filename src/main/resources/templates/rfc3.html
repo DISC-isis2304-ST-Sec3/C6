@@ -23,7 +23,7 @@
                 <th:block th:each="dato : ${rta}">
                     <tr>
                         <td th:text="${dato[0]}"></td>
-                        <td th:text="${dato[1]}"></td>
+                        <td th:text="${dato[1]} + '%'"></td>
                     </tr>
                 </th:block>
             </tbody>
