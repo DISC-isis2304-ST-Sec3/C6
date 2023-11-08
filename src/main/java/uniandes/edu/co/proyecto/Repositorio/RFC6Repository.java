@@ -18,7 +18,7 @@ public interface RFC6Repository extends JpaRepository<Reserva, Long>{
         "FROM\r\n" +
             "reservas\r\n" +
         "WHERE\r\n" +
-            "check_in = 1 -- Asegúrate de que solo estás considerando reservas con check-in confirmado\r\n" +
+            "check_in = '1' -- Asegúrate de que solo estás considerando reservas con check-in confirmado\r\n" +
             "AND fecha_entrada BETWEEN (SELECT MIN(fecha_entrada) FROM reservas) AND (SELECT MAX(fecha_salida) FROM reservas)\r\n" +
         "GROUP BY\r\n" +
             "fecha_entrada\r\n" +
@@ -63,7 +63,7 @@ public interface RFC6Repository extends JpaRepository<Reserva, Long>{
         "FROM\r\n" +
             "reservas\r\n" +
         "WHERE\r\n" +
-            "check_in = 1 -- Asegúrate de que solo estás considerando reservas con check-in confirmado\r\n" +
+            "check_in = '1' -- Asegúrate de que solo estás considerando reservas con check-in confirmado\r\n" +
             "AND fecha_entrada BETWEEN (SELECT MIN(fecha_entrada) FROM reservas) AND (SELECT MAX(fecha_salida) FROM reservas)\r\n" +
         "GROUP BY\r\n" +
             "fecha_entrada\r\n" +
