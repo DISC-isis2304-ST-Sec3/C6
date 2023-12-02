@@ -27,7 +27,7 @@ public class Reserva {
 
 
     public Reserva(Integer numero_personas, Date fecha_entrada, Date fecha_salida, Integer costo_total, Boolean check_in, Boolean check_out,
-    Integer cont_reservas, Hotel hotel_Id, Habitacion habitacion, Usuario usuarios, Plan_De_Consumo plan_De_Consumo, List<Servicio> servicios) {
+    Integer cont_reservas, Hotel hotel_Id, Habitacion habitacion, Plan_De_Consumo plan_De_Consumo, List<Servicio> servicios) {
         this.numero_personas = numero_personas;
         this.fecha_entrada = fecha_entrada;
         this.fecha_salida = fecha_salida;
