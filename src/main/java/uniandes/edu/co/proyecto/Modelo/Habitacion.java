@@ -2,36 +2,31 @@ package uniandes.edu.co.proyecto.Modelo;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
+import java.util.Arrays;
+import java.util.List;
 
-@Entity
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-@Table (name="habitaciones")
+@Document("Habitacion")
 public class Habitacion {
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)  
-    private Long id;
-    private String tipo_habitacion;
+    private String id;
     private Integer costo_noche;
     private Integer cont_habitaciones;//Contador 
-
-    @ManyToOne
-    @JoinColumn(name = "hoteles_id", referencedColumnName = "id")
-    private Hotel hotel;
+    private List<tipoHabitacion> tipoHabitacion;
     
-    public Habitacion()
-    {;}
 
-    public Habitacion(Long id, String tipo_habitacion, Integer costo_noche, Integer cont_habitaciones, Hotel hotel) {
+    public Habitacion(String id, Integer costo_noche, Integer cont_habitaciones, List<tipoHabitacion> tipoHabitacion) {
         this.id = id;
-        this.tipo_habitacion = tipo_habitacion;
         this.costo_noche = costo_noche;
         this.cont_habitaciones = cont_habitaciones;
-        this.hotel = hotel; 
+        this.tipoHabitacion = tipoHabitacion; 
     }
 
     
@@ -43,20 +38,20 @@ public class Habitacion {
         this.cont_habitaciones = cont_habitaciones;
     }
 
-    public Long getIdn() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public String getTipo_habitacion() {
-        return tipo_habitacion;
+    public List<tipoHabitacion> getTipoHabitacion() {
+        return tipoHabitacion;
     }
 
-    public void setTipo_habitacion(String tipo_habitacion) {
-        this.tipo_habitacion = tipo_habitacion;
+    public void setTipoHabitacion(List<tipoHabitacion> tipoHabitacion) {
+        this.tipoHabitacion = tipoHabitacion;
     }
 
     public Integer getCosto_noche() {

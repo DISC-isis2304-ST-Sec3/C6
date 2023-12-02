@@ -2,14 +2,18 @@ package uniandes.edu.co.proyecto.Modelo;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import java.util.List;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import jakarta.persistence.Table;
-@Entity
-@Table(name="planes_de_cosumo")
+@Document("Plan_De_Consumo")
+
 public class Plan_De_Consumo {
-    
+
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO) 
     private int id;
     private String nombre;
     private boolean bebida; 

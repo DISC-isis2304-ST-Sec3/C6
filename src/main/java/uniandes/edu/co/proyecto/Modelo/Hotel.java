@@ -1,26 +1,26 @@
 package uniandes.edu.co.proyecto.Modelo;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import java.util.List;
 
-@Entity
-@Table(name="hoteles")
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document("hoteles")
 public class Hotel {
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)  
-    private Long id;
+    private Long Hotel_Id;
     private String nombre;
     private String tipo;
     private int estrellas; 
 
-    public Hotel(){;}
 
     public Hotel(String nombre, String tipo, int estrellas) {
         this.nombre = nombre;
         this.tipo = tipo;
         this.estrellas = estrellas;
+    }
+   public Hotel() {
+        super();
     }
 
     public String getNombre() {

@@ -2,34 +2,42 @@ package uniandes.edu.co.proyecto.Modelo;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import java.util.List;
 
-@Entity
-@Table (name="servicios")
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+
+@Document("Servicio")
+
 public class Servicio {
-
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)  
-    private Long id;
-    private String nombre;
+    private String id;
+    private String Nombre;
     private String Tipo_Servicio;
-    private Integer precio;
+    private Integer Precio;
+    @DBRef
+    private Hotel Hotel_Id;
+
+
+
     public Servicio()
     {;}
 
-    public Servicio(Long id, String nombre, String Tipo_Servicio, Integer precio) {
+    public Servicio(String id, String Nombre, String Tipo_Servicio, Integer Precio, Hotel Hotel_Id) {
         this.id = id;
-        this.nombre = nombre;
+        this.Nombre = Nombre;
         this.Tipo_Servicio= Tipo_Servicio;
-        this.precio= precio;
+        this.Precio= Precio;
+        this.Hotel_Id = Hotel_Id;
     }
     
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
     public String getTipoServicio() {
@@ -41,18 +49,18 @@ public class Servicio {
     }
 
     public String getNombre() {
-        return nombre;
+        return Nombre;
     }
 
     public void setNombre(String nombre) {
-        this.nombre = nombre;
+        this.Nombre = Nombre;
     }
     
     public Integer getPrecio() {
-        return precio;
+        return Precio;
     }
 
-    public void setPrecio(Integer precio) {
-        this.precio = precio;
+    public void setPrecio(Integer Precio) {
+        this.Precio = Precio;
     }
 }

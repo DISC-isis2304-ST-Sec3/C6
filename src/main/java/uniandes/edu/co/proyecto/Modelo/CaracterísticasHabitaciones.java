@@ -1,10 +1,14 @@
 package uniandes.edu.co.proyecto.Modelo;
 import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import java.util.Arrays;
+import java.util.List;
 
-@Entity
-@Table(name="característicasHabitaciones")
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
+import org.springframework.data.mongodb.core.mapping.Document;import jakarta.persistence.Table;
+
+@Document("CaracterísticasHabitaciones")
+
 public class CaracterísticasHabitaciones {
         @Id
         private int id;

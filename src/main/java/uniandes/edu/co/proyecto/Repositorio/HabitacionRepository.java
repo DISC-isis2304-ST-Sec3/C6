@@ -1,35 +1,29 @@
 package uniandes.edu.co.proyecto.Repositorio;
-import java.util.Collection;
-import org.springframework.data.jpa.repository.JpaRepository;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.data.mongodb.repository.Query;
 import uniandes.edu.co.proyecto.Modelo.Habitacion;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
-import org.springframework.data.jpa.repository.Modifying;
-import jakarta.transaction.Transactional;
 
-public interface HabitacionRepository extends JpaRepository<Habitacion, Long>{
-     @Query(value = "SELECT * FROM Habitaciones", nativeQuery = true)
-        Collection<Habitacion> darHabitaciones();
+import java.util.List;
 
-     @Query(value = "SELECT * FROM Habitaciones WHERE id = :id", nativeQuery = true)
-        Habitacion darHabitacion(@Param("id") int id);
-        
-    // @Modifying
-    //     @Transactional
-    //     @Query(value = "INSERT INTO Habitaciones (id, tipo_habitacion, costo_noche) VALUES ( proyecto_sequence.nextval , :tipo_habitacion, :costo_noche, :cont_habitaciones)", nativeQuery = true)
-    //     void insertarHabitacion(@Param("tipo_habitacion") String tipo_habitacion, @Param("costo_noche") Integer costo_noche, @Param("cont_habitaciones") Integer cont_habitaciones);
+public interface HabitacionRepository extends MongoRepository<Habitacion, String> {
 
-    // @Modifying
-    //     @Transactional
-    //     @Query(value = "UPDATE Habitaciones SET tipo_habitacion = :tipo_habitacion, costo_noche = :costo_noche, cont_habitaciones =: cont_habitaciones WHERE id = :id", nativeQuery = true)
-    //     void actualizarHabitacion(@Param("id") long id, @Param("tipo_habitacion") String tipo_habitacion, @Param("costo_noche") Integer costo_noche, @Param("cont_habitaciones") Integer cont_habitaciones);
+    // CREATE
+    Habitacion save(Habitacion habitacion);
 
-    
-    //     @Modifying
-    //     @Transactional
-    //     @Query(value = "DELETE FROM Habitaciones WHERE id = :id", nativeQuery = true)
-    //     void eliminarHabitacion(@Param("id") long id);
+    // READ
+    @Query("{ 'tipo' : ?0 }")
+    Habitacion findByNumero(String tipo);
 
-        
-        
+    @Query("{}")
+    List<Habitacion> findAllHabitaciones();
+
+    // DELETE
+    @Query(value = "{ 'numero' : ?0 }", delete = true)
+    void deleteByNumero(Integer numero);
+
+    // UPDATE
+    @Query("{ 'tipo' : ?0 }")
+    Habitacion updateHabitacion(String tipo, Habitacion tipoHabitacion);
+
 }

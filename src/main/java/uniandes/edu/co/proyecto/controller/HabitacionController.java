@@ -20,13 +20,13 @@ public class HabitacionController {
 
     @GetMapping("/Habitaciones")
     public String habitaciones(Model model){
-        model.addAttribute("Habitaciones", habitacionRepository.darHabitaciones());
+        model.addAttribute("Habitaciones", habitacionRepository.findAllHabitaciones());
         return model.toString();
     }
 
     @GetMapping("/Habitaciones/new")
     public String habitacionForm(Model model){
-        model.addAttribute("habitacion", new Habitacion());
+        model.addAttribute("tipoHabitacion", habitacionRepository.findAllHabitaciones());
         return "habitacionNueva";
     }
 

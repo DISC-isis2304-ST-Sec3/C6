@@ -8,15 +8,18 @@ import java.util.Collection;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import jakarta.transaction.Transactional;
+import java.util.List;
 
 
-public interface ReservaRepository extends JpaRepository<Reserva, Long> {
+public interface ReservaRepository extends JpaRepository<Reserva, String> {
      @Query(value = "SELECT * FROM Reservas", nativeQuery = true)
         Collection<Reserva> darReservas();
 
      @Query(value = "SELECT * FROM Reservas WHERE id = :id", nativeQuery = true)
         Reserva darReserva(@Param("id") long id);
 
+    @Query("{}")
+    List<Reserva> findAllReservaes();
     // @Modifying
     //     @Transactional
     //     @Query(value = "INSERT INTO Reservas (id,id_usuario,numero_personas,fecha_entrada,fecha_salida,costo_total,check_in,check_out,id_habitacion) VALUES ( proyecto_sequence.nextval , :id_usuario, :numero_personas, :fecha_entrada, :fecha_salida, :costo_total, :check_in, :check_out, :id_habitacion)", nativeQuery = true)

@@ -1,21 +1,23 @@
 package uniandes.edu.co.proyecto.Repositorio;
+
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
-import uniandes.edu.co.proyecto.Modelo.Servicio;
+
+import uniandes.edu.co.proyecto.Modelo.tipoHabitacion;
 
 import java.util.List;
 
-public interface ServicioRepository extends MongoRepository<Servicio, String> {
+public interface tipoHabitacionRepository extends MongoRepository<tipoHabitacion, String> {
 
     // CREATE
-    Servicio save(Servicio servicio);
+    tipoHabitacion save(tipoHabitacion tipoHabitacion);
 
     // READ
     @Query(value = "{ tipo : ?0 }")
-    Servicio findByTipo(String tipo);
+    tipoHabitacion findByTipo(String tipo);
 
     @Query("{}")
-    List<Servicio> findAllServicios();
+    List<tipoHabitacion> findAllTiposHabitacion();
 
     // DELETE
     @Query(value = "{ 'tipo' : ?0 }", delete = true)
@@ -23,6 +25,6 @@ public interface ServicioRepository extends MongoRepository<Servicio, String> {
 
     // UPDATE
     @Query("{ 'tipo' : ?0 }")
-    Servicio updateServicio(String tipo, Servicio tipoHabitacion);
+    tipoHabitacion updateTipoHabitacion(String tipo, tipoHabitacion TipoHabitacion);
 
 }
