@@ -9,7 +9,7 @@ import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 
-@Document("Reserva")
+@Document("reservas")
 
 public class Reserva {
     @Id
@@ -27,7 +27,9 @@ public class Reserva {
 
 
     public Reserva(Integer numero_personas, Date fecha_entrada, Date fecha_salida, Integer costo_total, Boolean check_in, Boolean check_out,
-    Integer cont_reservas, Hotel hotel_Id, Habitacion habitacion, Plan_De_Consumo plan_De_Consumo, List<Servicio> servicios) {
+    Integer cont_reservas, Hotel hotel_Id, List<Servicio> servicios) {
+        super();
+
         this.numero_personas = numero_personas;
         this.fecha_entrada = fecha_entrada;
         this.fecha_salida = fecha_salida;
