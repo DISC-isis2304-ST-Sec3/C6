@@ -12,7 +12,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document("Reserva")
 
 public class Reserva {
-
     @Id
 	private String id;
     private Integer numero_personas;

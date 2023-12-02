@@ -18,10 +18,10 @@ public class ReservaController {
     @Autowired
     private ReservaRepository reservaRepository;
 
-    @GetMapping("/Reservas")
-    public String reservaes(Model model){
-        model.addAttribute("Reservas", reservaRepository.darReservas());
-        return model.toString();
+    @GetMapping("/reservas")
+    public String reservas(Model model) {
+        model.addAttribute("reservas", reservaRepository.findAllReservaes());
+        return "reservas";
     }
 
     @GetMapping("/Reservas/new")
@@ -29,34 +29,7 @@ public class ReservaController {
         model.addAttribute("reserva", new Reserva());
         return "reservaNueva";
     }
-
-    // @PostMapping("/Reservas/new/save")
-    // public String reservaGuardar(@ModelAttribute Reserva reserva){
-    //     reservaRepository.insertarReserva(reserva.getId_usuario(),reserva.getNumero_personas(), reserva.getFecha_entrada(), reserva.getFecha_salida(), reserva.getCosto_total(), reserva.getCheck_in(), reserva.getCheck_out(),reserva.getId_habitacion());
-    //     return "redirect:/Reservas";
-    // }
-
-    // @GetMapping("/Reservas/{id}/edit")
-    // public String reservaEditarForm(@PathVariable("id") int id, Model model){
-    //     Reserva reserva= reservaRepository.darReserva(id);
-    //     if(reserva!=null){
-    //         model.addAttribute("reserva", reserva);
-    //         return "reservaEditar";
-    //     } else{
-    //         return "redirect:/Reservas";
-    //     }
-    // }
-
-    // @PostMapping("/Reservas/{id}/edit/save")
-    // public String reservaEditarGuardar(@PathVariable("id") int id, @ModelAttribute Reserva reserva){
-    //     reservaRepository.actualizarReserva(id,reserva.getId_usuario(), reserva.getNumero_personas(), reserva.getFecha_entrada(), reserva.getFecha_salida(), reserva.getCosto_total(), reserva.getCheck_in(), reserva.getCheck_out(),reserva.getId_habitacion());
-    //     return "redirect:/Reservas";
-    // }
-
-    // @GetMapping("/Reservas/{id}/delete")
-    // public String reservaEliminar(@PathVariable("id") int id){
-    //     reservaRepository.eliminarReserva(id);
-    //     return "redirect:/Reservas";
-    // }
-
 }
+
+
+
